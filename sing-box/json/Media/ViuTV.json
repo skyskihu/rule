@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "bootstrapcdn.com",
+        "cloudfront.net",
+        "cognito-identity.us-east-1.amazonaws.com",
+        "firebaseio.com",
+        "jwpcdn.com",
+        "jwplayer.com",
+        "mobileanalytics.us-east-1.amazonaws.com",
+        "nowe.com",
+        "viu.com",
+        "viu.now.com",
+        "viu.tv"
+      ]
+    }
+  ]
+}

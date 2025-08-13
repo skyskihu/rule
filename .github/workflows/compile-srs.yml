@@ -1,0 +1,188 @@
+name: Compile srs
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - "sing-box/json/**/*.json"
+  workflow_dispatch:
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v44
+        with:
+          files: |
+            sing-box/json/**/*.json
+
+      - name: Download sing-box
+        if: steps.changed-files.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
+        run: |
+          wget -O sing-box.tar.gz https://github.com/SagerNet/sing-box/releases/download/v1.11.15/sing-box-1.11.15-linux-amd64.tar.gz
+          tar -xzf sing-box.tar.gz
+          chmod +x sing-box-1.11.15-linux-amd64/sing-box
+          sudo mv sing-box-1.11.15-linux-amd64/sing-box /usr/local/bin/
+
+      - name: Create srs directory
+        if: steps.changed-files.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
+        run: mkdir -p sing-box/srs
+
+      - name: Compile changed JSON files
+        if: steps.changed-files.outputs.any_changed == 'true' && github.event_name == 'push'
+        run: |
+          # 将 changed files 写入临时文件，每行一个文件名
+          echo "${{ steps.changed-files.outputs.all_changed_files }}" | tr ' ' '\n' > /tmp/changed_files.txt
+          
+          # 读取文件列表并处理每个文件
+          while IFS= read -r file || [ -n "$file" ]; do
+            # 跳过空行
+            [ -n "$file" ] || continue
+          
+            # 检查文件是否存在
+            if [ ! -f "$file" ]; then
+              echo "Warning: File $file not found, skipping..."
+              continue
+            fi
+          
+            echo "Processing file: $file"
+            filename=$(basename "$file" .json)
+          
+            # 保持目录结构：从 sing-box/json/ 到 sing-box/srs/
+            relative_path=${file#sing-box/json/}
+            relative_dir=$(dirname "$relative_path")
+          
+            # 创建对应的输出目录
+            if [ "$relative_dir" != "." ]; then
+              echo "Creating directory: sing-box/srs/$relative_dir"
+              mkdir -p "sing-box/srs/$relative_dir"
+              output_file="sing-box/srs/$relative_dir/${filename}.srs"
+            else
+              output_file="sing-box/srs/${filename}.srs"
+            fi
+          
+            echo "Output will be: $output_file"
+            temp_file=$(mktemp)
+          
+            # 使用引号包围文件名，确保正确处理包含空格的文件
+            jq -c . "$file" > "$temp_file"
+            sing-box rule-set compile --output "$output_file" "$temp_file"
+            rm "$temp_file"
+          
+            echo "Compiled: $file -> $output_file"
+          done < /tmp/changed_files.txt
+          
+          # 清理临时文件
+          rm /tmp/changed_files.txt
+
+      - name: Compile all JSON files (manual run)
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          echo "Compiling all JSON files in sing-box/json directory and subdirectories..."
+          
+          # 确保目录存在
+          if [ ! -d "sing-box/json" ]; then
+            echo "Error: sing-box/json directory not found!"
+            exit 1
+          fi
+          
+          # 列出所有找到的JSON文件用于调试
+          echo "Found JSON files:"
+          find sing-box/json -name "*.json" -type f
+          
+          # 查找所有 JSON 文件并编译（包括子目录）
+          find sing-box/json -name "*.json" -type f -print0 | while IFS= read -r -d '' file; do
+            echo "Processing file: $file"
+            filename=$(basename "$file" .json)
+          
+            # 保持目录结构：从 sing-box/json/ 到 sing-box/srs/
+            relative_path=${file#sing-box/json/}
+            relative_dir=$(dirname "$relative_path")
+          
+            # 创建对应的输出目录
+            if [ "$relative_dir" != "." ]; then
+              echo "Creating directory: sing-box/srs/$relative_dir"
+              mkdir -p "sing-box/srs/$relative_dir"
+              output_file="sing-box/srs/$relative_dir/${filename}.srs"
+            else
+              output_file="sing-box/srs/${filename}.srs"
+            fi
+          
+            echo "Output will be: $output_file"
+            temp_file=$(mktemp)
+          
+            # 使用引号包围文件名，确保正确处理包含空格的文件
+            jq -c . "$file" > "$temp_file"
+            sing-box rule-set compile --output "$output_file" "$temp_file"
+            rm "$temp_file"
+          
+            echo "Compiled: $file -> $output_file"
+          done
+
+      - name: Clean up orphaned SRS files
+        if: (steps.changed-files.outputs.any_changed == 'true' && github.event_name == 'push') || github.event_name == 'workflow_dispatch'
+        run: |
+          # Check if srs directory exists
+          if [ -d "sing-box/srs" ]; then
+            echo "Checking for orphaned SRS files..."
+          
+            # 查找所有 SRS 文件（包括子目录）
+            find sing-box/srs -name "*.srs" -type f | while IFS= read -r srs_file; do
+              echo "Checking SRS file: $srs_file"
+          
+              # 从 srs 文件路径获取相对路径和文件名
+              relative_srs_path=${srs_file#sing-box/srs/}
+              srs_basename=$(basename "$srs_file" .srs)
+              srs_dir=$(dirname "$relative_srs_path")
+          
+              # 构建对应的 JSON 文件路径
+              if [ "$srs_dir" != "." ]; then
+                json_file="sing-box/json/$srs_dir/${srs_basename}.json"
+              else
+                json_file="sing-box/json/${srs_basename}.json"
+              fi
+          
+              # 检查对应的 JSON 文件是否存在
+              if [ ! -f "$json_file" ]; then
+                echo "Removing orphaned SRS file: $srs_file (no corresponding JSON: $json_file)"
+                rm "$srs_file"
+          
+                # 如果目录为空，也删除空目录
+                srs_file_dir=$(dirname "$srs_file")
+                if [ "$srs_file_dir" != "sing-box/srs" ] && [ -d "$srs_file_dir" ]; then
+                  rmdir "$srs_file_dir" 2>/dev/null || true
+                fi
+              else
+                echo "Keeping SRS file: $srs_file (JSON exists: $json_file)"
+              fi
+            done
+          fi
+
+      - name: Check for changes in srs files
+        if: (steps.changed-files.outputs.any_changed == 'true' && github.event_name == 'push') || github.event_name == 'workflow_dispatch'
+        id: srs-changes
+        run: |
+          if [ -n "$(git status --porcelain sing-box/srs/)" ]; then
+            echo "srs_changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "srs_changed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: ((steps.changed-files.outputs.any_changed == 'true' && github.event_name == 'push') || github.event_name == 'workflow_dispatch') && steps.srs-changes.outputs.srs_changed == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add sing-box/srs/
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            git commit -m "Manual compile: Update all SRS files and remove orphaned files"
+          else
+            git commit -m "Auto-compile: Update SRS files and remove orphaned files"
+          fi
+          git push

@@ -1,0 +1,17 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "content-ause1-ur-discovery1.uplynk.com",
+        "disco-api.com",
+        "discoveryplus.com",
+        "fwmrm.net",
+        "getblueshift.com",
+        "litix.io",
+        "mobile-collector.newrelic.com",
+        "uplynk.com"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "dmm.com",
+        "dmm.co.jp",
+        "dmmgames.com",
+        "dmm.hk",
+        "dmm-extension.com"
+      ]
+    },
+    {
+      "domain": [
+        "d129a39a862w9z.cloudfront.net",
+        "d2ezz24t9nm0vu.cloudfront.net"
+      ]
+    }
+  ]
+}
