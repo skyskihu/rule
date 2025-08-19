@@ -1,0 +1,123 @@
+# GitHub Actions工作流：自动编译sing-box规则集
+name: Compile srs
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - "sing-box/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download sing-box
+        run: |
+          wget -O sing-box.tar.gz https://github.com/SagerNet/sing-box/releases/download/v1.11.15/sing-box-1.11.15-linux-amd64.tar.gz
+          tar -xzf sing-box.tar.gz
+          chmod +x sing-box-1.11.15-linux-amd64/sing-box
+          sudo mv sing-box-1.11.15-linux-amd64/sing-box /usr/local/bin/
+
+      - name: Process and compile JSON files
+        run: |
+          echo "Processing all JSON files in sing-box directory..."
+          
+          # 确保sing-box目录存在
+          if [ ! -d "sing-box" ]; then
+            echo "Error: sing-box directory not found!"
+            exit 1
+          fi
+          
+          # 创建临时目录用于存放编译结果
+          mkdir -p sing-box-compiled
+          
+          # 查找所有JSON文件并处理
+          find sing-box -name "*.json" -type f | while IFS= read -r file; do
+            echo "Processing file: $file"
+          
+            # 获取相对于sing-box的路径
+            relative_path=${file#sing-box/}
+            file_dir=$(dirname "$relative_path")
+            filename=$(basename "$file" .json)
+          
+            # 创建对应的输出目录结构
+            if [ "$file_dir" != "." ]; then
+              mkdir -p "sing-box-compiled/$file_dir"
+              output_file="sing-box-compiled/$file_dir/${filename}.srs"
+            else
+              output_file="sing-box-compiled/${filename}.srs"
+            fi
+          
+            echo "Output will be: $output_file"
+          
+            # 处理文件名中的空格 - 创建临时文件
+            temp_json=$(mktemp --suffix=.json)
+            temp_srs=$(mktemp --suffix=.srs)
+          
+            # 复制JSON内容到临时文件并压缩
+            jq -c . "$file" > "$temp_json"
+          
+            # 编译到临时srs文件
+            if sing-box rule-set compile --output "$temp_srs" "$temp_json"; then
+              # 复制编译结果到最终位置
+              cp "$temp_srs" "$output_file"
+              echo "Successfully compiled: $file -> $output_file"
+            else
+              echo "Error compiling: $file"
+              exit 1
+            fi
+          
+            # 清理临时文件
+            rm "$temp_json" "$temp_srs"
+          done
+          
+          # 替换sing-box目录为编译结果
+          rm -rf sing-box
+          mv sing-box-compiled sing-box
+
+      - name: Switch to compile branch and commit
+        run: |
+          # 切换到compile分支（如果不存在则创建孤立分支）
+          git checkout --orphan compile || git checkout compile
+          
+          # 清除所有已跟踪的文件
+          git rm -rf . 2>/dev/null || true
+          
+          # 配置git
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          # 只添加sing-box目录
+          git add sing-box/
+          
+          # 提交信息
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            commit_message="Manual compile: Update all SRS files from main branch"
+          else
+            commit_message="Auto-compile: Update SRS files from main branch ($(date '+%Y-%m-%d %H:%M:%S'))"
+          fi
+          
+          # 提交
+          git commit -m "$commit_message"
+          
+          # 强制推送到compile分支
+          git push --force origin compile
+          
+          echo "Successfully force pushed compiled files to compile branch"
+
+      - name: Summary
+        run: |
+          echo "✅ Compilation completed and files force pushed to compile branch"
+          echo "📁 Total SRS files:"
+          find sing-box -name "*.srs" -type f | wc -l
+          echo "📂 Directory structure:"
+          find sing-box -type d | sort

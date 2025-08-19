@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "bamgrid.com",
+        "cdn.registerdisney.go.com",
+        "disney-plus.net",
+        "disneynow.com",
+        "disneyplus.com",
+        "disneystreaming.com",
+        "dssott.com"
+      ]
+    }
+  ]
+}
