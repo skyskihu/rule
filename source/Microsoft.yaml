@@ -1,0 +1,33 @@
+payload:
+  # > Microsoft
+  - DOMAIN-SUFFIX,microsoft
+  - DOMAIN-SUFFIX,microsoft.com
+  - DOMAIN-SUFFIX,microsoft.cn
+  - DOMAIN-SUFFIX,microsoftonline.com
+  - DOMAIN-SUFFIX,microsoft365.com
+  - DOMAIN-SUFFIX,office.com
+  - DOMAIN-SUFFIX,office365.com
+  - DOMAIN-SUFFIX,outlook.com
+  - DOMAIN-SUFFIX,live.com
+  - DOMAIN-SUFFIX,hotmail.com
+  - DOMAIN-SUFFIX,azure.com
+  - DOMAIN-SUFFIX,azure.cn
+  - DOMAIN-SUFFIX,windows.net
+  - DOMAIN-SUFFIX,azureedge.net
+  - DOMAIN-SUFFIX,trafficmanager.net
+  - DOMAIN-SUFFIX,cloudapp.net
+  - DOMAIN-SUFFIX,bing.com
+  - DOMAIN-SUFFIX,biying.cn
+  - DOMAIN-SUFFIX,msn.com
+  - DOMAIN-SUFFIX,onedrive.com
+  - DOMAIN-SUFFIX,sharepoint.com
+  - DOMAIN-SUFFIX,teams.com
+  - DOMAIN-SUFFIX,visualstudio.com
+  - DOMAIN-SUFFIX,vscode.dev
+  - DOMAIN-SUFFIX,nuget.org
+  - DOMAIN-SUFFIX,powershellgallery.com
+  - DOMAIN-SUFFIX,sysinternals.com
+  - DOMAIN-SUFFIX,xbox.com
+  - DOMAIN-SUFFIX,xboxlive.com
+  - DOMAIN-SUFFIX,minecraft.net
+  - DOMAIN-SUFFIX,mojang.com
