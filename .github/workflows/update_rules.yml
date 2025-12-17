@@ -31,27 +31,21 @@ jobs:
         run: |
           pip install pyyaml
 
-          # 安装 sing-box
           wget -qO- https://github.com/SagerNet/sing-box/releases/download/v1.11.15/sing-box-1.11.15-linux-amd64.tar.gz | tar -xz
           sudo mv sing-box-*/sing-box /usr/local/bin/
 
-          # 赋予脚本执行权限
           chmod +x .github/*.sh
 
-      # 执行转换脚本
       - name: Convert YAML to JSON
         run: python conversion_to_sing-box.py source temp_json
 
-      # 推送转换后的文件
       - name: Push JSON to raw
         run: |
           ./.github/push.sh temp_json raw sing-box "Auto-update: JSON rules"
 
-      # 编译文本文件
       - name: Compile JSON to SRS
         run: ./.github/compile.sh temp_json temp_srs
 
-      # 推送编译产物到 compile 分支
       - name: Push SRS to compile
         run: |
           ./.github/push.sh temp_srs compile sing-box "Auto-update: SRS rules"

@@ -2,14 +2,14 @@
 
 set -e
 
-SOURCE_DIR="$1"      # 本地的新文件目录
-BRANCH_NAME="$2"     # 目标分支
-TARGET_FOLDER="$3"   # 目标分支里的文件夹名
-COMMIT_MSG="$4"      # 提交信息
+SOURCE_DIR="$1"    # 本地的新文件目录
+BRANCH_NAME="$2"   # 目标分支
+TARGET_FOLDER="$3" # 目标分支里的文件夹名
+COMMIT_MSG="$4"    # 提交信息
 
 if [ -z "$SOURCE_DIR" ] || [ -z "$BRANCH_NAME" ] || [ -z "$TARGET_FOLDER" ]; then
-    echo "Usage: $0 <source_dir> <branch_name> <target_folder_name> [commit_msg]"
-    exit 1
+	echo "Usage: $0 <source_dir> <branch_name> <target_folder_name> [commit_msg]"
+	exit 1
 fi
 
 git config --global user.email "action@github.com"
