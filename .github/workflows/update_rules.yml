@@ -32,20 +32,38 @@ jobs:
           pip install pyyaml
 
           wget -qO- https://github.com/SagerNet/sing-box/releases/download/v1.11.15/sing-box-1.11.15-linux-amd64.tar.gz | tar -xz
-          sudo mv sing-box-*/sing-box /usr/local/bin/
+          sudo install -m 0755 sing-box-1.11.15-linux-amd64/sing-box /usr/local/bin/sing-box
 
-          chmod +x .github/*.sh
+          # wget -qO- https://github.com/MetaCubeX/mihomo/releases/download/v1.19.17/mihomo-linux-amd64-v1-v1.19.17.gz | gunzip -d > mihomo
+          # sudo install -m 0755 mihomo /usr/local/bin/mihomo
 
-      - name: Convert YAML to JSON
-        run: python conversion_to_sing-box.py source temp_json
-
-      - name: Push JSON to raw
+      - name: Create temporary directories
         run: |
-          ./.github/push.sh temp_json raw sing-box "Auto-update: JSON rules"
+          mkdir -p raw/sing-box raw/clash
+          mkdir -p compile/sing-box compile/clash
+
+      - name: Convert sing-box format
+        run: python conversion_to_sing-box.py source raw/sing-box
+
+      - name: Copy yaml to raw
+        run: cp -r source/* raw/clash/
 
       - name: Compile JSON to SRS
-        run: ./.github/compile.sh temp_json temp_srs
-
-      - name: Push SRS to compile
         run: |
-          ./.github/push.sh temp_srs compile sing-box "Auto-update: SRS rules"
+          chmod +x ./.github/compile_sing-box.sh
+          ./.github/compile_sing-box.sh raw/sing-box compile/sing-box
+
+      # - name: Compile YAML to MRS
+      #   run: |
+      #     chmod +x ./.github/compile_sing-box.sh
+      #     ./.github/compile_clash.sh raw/clash compile/clash
+
+      - name: Push raw branch
+        run: |
+          chmod +x ./.github/push_raw.sh
+          ./.github/push_raw.sh
+
+      - name: Push compile branch
+        run: |
+          chmod +x ./.github/push_compile.sh
+          ./.github/push_compile.sh
