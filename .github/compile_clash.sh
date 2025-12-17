@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e -o pipefail
+
 src="${1%/}"
 dst="${2%/}"
 

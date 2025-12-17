@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+set -e -o pipefail
 
 cd raw/
 
@@ -12,8 +12,3 @@ git add .
 git commit -m "Auto-update: rules"
 git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
 git push -f origin raw
-
-cd -
-rm -rf raw/.git
-
-echo "Successfully pushed raw directory to raw branch"
