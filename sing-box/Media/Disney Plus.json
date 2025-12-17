@@ -1,0 +1,17 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "cdn.registerdisney.go.com",
+        "disney-plus.net",
+        "disney.api.edge.bamgrid.com",
+        "disney.connections.edge.bamgrid.com",
+        "disneynow.com",
+        "disneyplus.com",
+        "disneystreaming.com",
+        "dssott.com"
+      ]
+    }
+  ]
+}

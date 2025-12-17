@@ -1,0 +1,46 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "abchina.com",
+        "abchina.com.cn",
+        "alibaba.com",
+        "alicdn.com",
+        "alipay.com",
+        "alipayobjects.com",
+        "aliyun.com",
+        "aliyuncs.com",
+        "boc.cn",
+        "ccb.com",
+        "ccb.com.cn",
+        "cebbank.com",
+        "citicbank.com",
+        "cmbchina.com",
+        "cmbimg.com",
+        "cmbt.cn",
+        "cn",
+        "douyin.com",
+        "ecitic.com",
+        "ecitic.net",
+        "gtimg.com",
+        "icbc.com.cn",
+        "jd.com",
+        "mbcloud.com",
+        "myqcloud.com",
+        "pingan.com",
+        "pingan.com.cn",
+        "qcloud.com",
+        "qq.com",
+        "taobao.com",
+        "tencent.com",
+        "tenpay.com",
+        "tmall.com",
+        "wechat.com",
+        "weibo.com",
+        "zhihu.com",
+        "zhimg.com"
+      ]
+    }
+  ]
+}

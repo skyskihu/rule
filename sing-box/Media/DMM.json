@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "dmm-extension.com",
+        "dmm.co.jp",
+        "dmm.com",
+        "img.vm-movie.jp",
+        "p-smith.com",
+        "videomarket.jp",
+        "vmdash-cenc.akamaized.net"
+      ]
+    }
+  ]
+}

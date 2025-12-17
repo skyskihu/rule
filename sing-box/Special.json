@@ -1,0 +1,74 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain": [
+        "aod.itunes.apple.com",
+        "appldnld.apple.com",
+        "apptrailers.itunes.apple.com",
+        "cm.steampowered.com",
+        "csgo.wmsj.cn",
+        "dl.steam.clngaa.com",
+        "dl.steam.ksyna.com",
+        "dota2.wmsj.cn",
+        "gs-loc-cn.apple.com",
+        "gstore.val.manlaxy.com",
+        "iosapps.itunes.apple.com",
+        "music.apple.com",
+        "mvod.itunes.apple.com",
+        "ol.epicgames.com",
+        "osxapps.itunes.apple.com",
+        "safebrowsing.googleapis.com",
+        "st.dl.bscstorage.net",
+        "st.dl.eccdnx.com",
+        "st.dl.pinyuncloud.com",
+        "steambroadcast.akamaized.net",
+        "steamcdn-a.akamaihd.net",
+        "steamcommunity-a.akamaihd.net",
+        "steampipe.steamcontent.tnkjmec.com",
+        "steampowered.com.8686c.com",
+        "steamstatic.com.8686c.com",
+        "steamstore-a.akamaihd.net",
+        "steamusercontent-a.akamaihd.net",
+        "steamuserimages-a.akamaihd.net",
+        "supportdownload.apple.com",
+        "swcdn.apple.com",
+        "tesla-cdn.thron.cn",
+        "tesla-cdn.thron.com",
+        "updates-http.cdn-apple.com",
+        "uplaypc-s-ubisoft.cdn.ubi.com",
+        "wmsjsteam.com"
+      ]
+    },
+    {
+      "domain_keyword": [
+        "announce",
+        "epicgames",
+        "torrent"
+      ]
+    },
+    {
+      "domain_suffix": [
+        "app-measurement.com",
+        "auth.com",
+        "dl.google.com",
+        "dl.playstation.net",
+        "msftconnecttest.com",
+        "smtp",
+        "solarcity.com",
+        "steamchina.com",
+        "steamcontent.com",
+        "steamserver.net",
+        "tesla.cn",
+        "tesla.com",
+        "tesla.com.cn",
+        "teslamotors.cn",
+        "teslamotors.com",
+        "teslamotors.com.cn",
+        "ts.la",
+        "ua5v.com",
+        "xunlei.com"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "netflix.com",
+        "netflix.net",
+        "nflxext.com",
+        "nflximg.com",
+        "nflximg.net",
+        "nflxso.net",
+        "nflxvideo.net"
+      ]
+    }
+  ]
+}
