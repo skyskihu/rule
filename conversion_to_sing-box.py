@@ -1,14 +1,16 @@
-import yaml
-import json
 import argparse
 import ipaddress
+import json
 import re
 from collections import defaultdict
 from pathlib import Path
+from typing import Dict, Any
+
+import yaml
 
 RULE_SET_VERSION = 3
 
-RULE_TYPE_MAP = {
+RULE_TYPE_MAP: Dict[str, str] = {
     "DOMAIN": "domain",
     "DOMAIN-SUFFIX": "domain_suffix",
     "DOMAIN-KEYWORD": "domain_keyword",
@@ -19,10 +21,13 @@ RULE_TYPE_MAP = {
     "DST-PORT": "port",
     "SRC-PORT": "source_port",
     "NETWORK": "network",
+    "PROCESS-NAME": "process_name",
+    "PROCESS-PATH": "process_path",
+    "PROCESS-PATH-REGEX": "process_path_regex",
 }
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
@@ -75,15 +80,14 @@ def process_directory(source_dir: str, output_dir: str) -> None:
     print(f"转换完成：成功 {success_count} 个，失败 {error_count} 个")
 
 
-def convert_yaml_to_json(yaml_path: Path) -> dict:
+def convert_yaml_to_json(yaml_path: Path) -> Dict[str, Any]:
     """转换单个 YAML 文件为 sing-box JSON 数据结构"""
     with open(yaml_path, "r", encoding="utf-8") as f:
         yaml_data = yaml.safe_load(f)
 
-    rule_lines = yaml_data.get("payload") or yaml_data.get("rules") or []
-    collected_rules = defaultdict(list)
+    rules_map: Dict[str, list[Any]] = defaultdict(list)
 
-    for line in rule_lines:
+    for line in yaml_data.get("payload"):
         if not isinstance(line, str):
             continue
 
@@ -98,44 +102,41 @@ def convert_yaml_to_json(yaml_path: Path) -> dict:
         if not verify(rule_type, value):
             continue
 
-        json_field = RULE_TYPE_MAP[rule_type]
+        key = RULE_TYPE_MAP[rule_type]
 
         if rule_type in ["DST-PORT", "SRC-PORT"]:
             value = int(value)
         elif rule_type == "NETWORK":
             value = value.lower()
 
-        collected_rules[json_field].append(value)
+        rules_map[key].append(value)
 
-    json_rules = []
-    for field in sorted(collected_rules.keys()):
-        values = collected_rules[field]
-        
-        if field in ["port", "source_port"]:
-            json_rules.append({field: sorted(set(values))})
-        else:
-            json_rules.append({field: sorted(set(map(str, values)))})
+    json_rules = [{key: values} for key, values in rules_map.items()]
+    json_data: Dict[str, Any] = {
+        "version": RULE_SET_VERSION,
+        "rules": json_rules
+    }
 
-    return {"version": RULE_SET_VERSION, "rules": json_rules}
+    return json_data
 
 
 def parse_rule_line(line: str) -> tuple[str, str]:
     """解析 Mihomo 规则行，返回 (规则类型, 规则值)"""
-    # 移除可能存在的行内注释 (例如: DOMAIN,x.com # 注释)
+    # 移除行内注释
     if "#" in line:
         line = line.split("#", 1)[0]
-    
+
     # 按逗号分割整个字符串
     parts = line.split(",")
-    
-    # 如果分割后不足2部分（没有类型或没有值），直接跳过
+
+    # 如果分割后不足2部分, 直接跳过
     if len(parts) < 2:
         return "", ""
-    
-    # 提取前两个部分：类型 和 值
+
+    # 提取前两个部分：类型和值
     rule_type = parts[0].strip()
     rule_value = parts[1].strip().strip('"\'')
-    
+
     return rule_type, rule_value
 
 
