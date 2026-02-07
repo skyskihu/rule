@@ -1,4 +1,4 @@
-payloadpayload:
+payload:
   # > Telegram
   - DOMAIN-SUFFIX,cdn-telegram.org
   - DOMAIN-SUFFIX,graph.org
