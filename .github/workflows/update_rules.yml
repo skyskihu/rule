@@ -2,7 +2,7 @@ name: Update Rules
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
     paths:
       - "source/**"
       - "conversion_to_sing-box.py"
@@ -51,12 +51,12 @@ jobs:
       - name: Compile JSON to SRS
         run: |
           chmod +x ./.github/compile_sing-box.sh
-          ./.github/compile_sing-box.sh raw/sing-box compile/sing-box
+          ./.github/compile_sing-box.sh
 
       # - name: Compile YAML to MRS
       #   run: |
       #     chmod +x ./.github/compile_sing-box.sh
-      #     ./.github/compile_clash.sh raw/clash compile/clash
+      #     ./.github/compile_clash.sh
 
       - name: Push raw branch
         run: |

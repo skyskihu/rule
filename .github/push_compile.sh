@@ -2,7 +2,7 @@
 
 set -e -o pipefail
 
-cd compile/
+cd compile
 
 git init
 git checkout -b compile

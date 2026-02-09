@@ -2,7 +2,7 @@
 
 set -e -o pipefail
 
-cd raw/
+cd raw
 
 git init
 git checkout -b raw
