@@ -3,22 +3,32 @@ payload:
   - DOMAIN-SUFFIX,microsoft
   - DOMAIN-SUFFIX,microsoft.com
   - DOMAIN-SUFFIX,microsoft.cn
-  - DOMAIN-SUFFIX,microsoftonline.com
-  - DOMAIN-SUFFIX,microsoft365.com
+
+  # > Office
   - DOMAIN-SUFFIX,office.com
   - DOMAIN-SUFFIX,office365.com
+  - DOMAIN-SUFFIX,microsoftonline.com
+  - DOMAIN-SUFFIX,microsoft365.com
+
+  # > Email
   - DOMAIN-SUFFIX,outlook.com
   - DOMAIN-SUFFIX,live.com
   - DOMAIN-SUFFIX,hotmail.com
+
+  # > Cloud
   - DOMAIN-SUFFIX,azure.com
   - DOMAIN-SUFFIX,azure.cn
   - DOMAIN-SUFFIX,windows.net
   - DOMAIN-SUFFIX,azureedge.net
   - DOMAIN-SUFFIX,trafficmanager.net
   - DOMAIN-SUFFIX,cloudapp.net
+
+  # > Search
   - DOMAIN-SUFFIX,bing.com
   - DOMAIN-SUFFIX,biying.cn
   - DOMAIN-SUFFIX,msn.com
+
+  # > Productivity
   - DOMAIN-SUFFIX,onedrive.com
   - DOMAIN-SUFFIX,sharepoint.com
   - DOMAIN-SUFFIX,teams.com
@@ -27,6 +37,8 @@ payload:
   - DOMAIN-SUFFIX,nuget.org
   - DOMAIN-SUFFIX,powershellgallery.com
   - DOMAIN-SUFFIX,sysinternals.com
+
+  # > Gaming
   - DOMAIN-SUFFIX,xbox.com
   - DOMAIN-SUFFIX,xboxlive.com
   - DOMAIN-SUFFIX,minecraft.net
