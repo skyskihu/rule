@@ -3,21 +3,21 @@ payload:
   - DOMAIN-SUFFIX,cn
 
   # > Payment
+  - DOMAIN-SUFFIX,tenpay.com
   - DOMAIN-SUFFIX,alipay.com
   - DOMAIN-SUFFIX,alipayobjects.com
-  - DOMAIN-SUFFIX,tenpay.com
 
   # > Tencent
   - DOMAIN-SUFFIX,qq.com
+  - DOMAIN-SUFFIX,gtimg.com
   - DOMAIN-SUFFIX,wechat.com
   - DOMAIN-SUFFIX,tencent.com
-  - DOMAIN-SUFFIX,gtimg.com
 
   # > E-commerce
-  - DOMAIN-SUFFIX,alibaba.com
-  - DOMAIN-SUFFIX,taobao.com
-  - DOMAIN-SUFFIX,tmall.com
   - DOMAIN-SUFFIX,jd.com
+  - DOMAIN-SUFFIX,tmall.com
+  - DOMAIN-SUFFIX,taobao.com
+  - DOMAIN-SUFFIX,alibaba.com
 
   # > Social & Content
   - DOMAIN-SUFFIX,weibo.com
@@ -26,10 +26,10 @@ payload:
   - DOMAIN-SUFFIX,douyin.com
 
   # > Cloud Service
+  - DOMAIN-SUFFIX,qcloud.com
   - DOMAIN-SUFFIX,aliyun.com
   - DOMAIN-SUFFIX,alicdn.com
   - DOMAIN-SUFFIX,aliyuncs.com
-  - DOMAIN-SUFFIX,qcloud.com
   - DOMAIN-SUFFIX,myqcloud.com
 
   # China Banks
@@ -41,9 +41,9 @@ payload:
   - DOMAIN-SUFFIX,boc.cn
 
   # > China Citic Bank
-  - DOMAIN-SUFFIX,citicbank.com
   - DOMAIN-SUFFIX,ecitic.com
   - DOMAIN-SUFFIX,ecitic.net
+  - DOMAIN-SUFFIX,citicbank.com
 
   # > China Construction Bank
   - DOMAIN-SUFFIX,ccb.com
@@ -53,10 +53,10 @@ payload:
   - DOMAIN-SUFFIX,cebbank.com
 
   # > China Merchants Bank
-  - DOMAIN-SUFFIX,cmbchina.com
-  - DOMAIN-SUFFIX,cmbimg.com
   - DOMAIN-SUFFIX,cmbt.cn
+  - DOMAIN-SUFFIX,cmbimg.com
   - DOMAIN-SUFFIX,mbcloud.com
+  - DOMAIN-SUFFIX,cmbchina.com
 
   # > Industrial and Commercial Bank of China
   - DOMAIN-SUFFIX,icbc.com.cn
