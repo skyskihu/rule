@@ -46,6 +46,7 @@ payload:
   - DOMAIN,dl.steam.ksyna.com
 
   - DOMAIN,gstore.val.manlaxy.com
+  - DOMAIN,gstore.val.smogfly.com
 
   - DOMAIN,st.dl.bscstorage.net
   - DOMAIN,st.dl.eccdnx.com
@@ -62,6 +63,8 @@ payload:
   - DOMAIN,steamstore-a.akamaihd.net
   - DOMAIN,steamusercontent-a.akamaihd.net
   - DOMAIN,steamuserimages-a.akamaihd.net
+
+  - DOMAIN,yif.gdtstream.com
 
   # > Tesla
   - DOMAIN,tesla-cdn.thron.cn
