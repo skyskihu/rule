@@ -1,11 +1,9 @@
 payload:
   # > Spotify
-
-  - PROCESS-NAME,com.spotify.music
+  - DOMAIN-SUFFIX,scdn.co
+  - DOMAIN-SUFFIX,pscdn.co
+  - DOMAIN-SUFFIX,spoti.fi
+  - DOMAIN-SUFFIX,spotify.com
+  - DOMAIN-SUFFIX,spotilocal.com
 
   - DOMAIN-KEYWORD,spotify
-
-  - DOMAIN-SUFFIX,pscdn.co
-  - DOMAIN-SUFFIX,scdn.co
-  - DOMAIN-SUFFIX,spoti.fi
-  - DOMAIN-SUFFIX,spotilocal.com
