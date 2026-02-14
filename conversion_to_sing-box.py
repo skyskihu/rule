@@ -4,7 +4,7 @@ import json
 import re
 from collections import defaultdict
 from pathlib import Path
-from typing import Dict, Any
+from typing import Dict, Any, Optional
 
 import yaml
 
@@ -31,39 +31,31 @@ def main() -> None:
     parser = argparse.ArgumentParser(
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
-    parser.add_argument("source", help="源目录路径（包含 YAML 文件）")
-    parser.add_argument("output", help="输出目录路径（保存 JSON 文件）")
+    parser.add_argument("source", help="源目录路径(包含 YAML 文件)")
+    parser.add_argument("output", help="输出目录路径(保存 JSON 文件)")
 
     args = parser.parse_args()
     process_directory(args.source, args.output)
 
 
 def process_directory(source_dir: str, output_dir: str) -> None:
-    """递归处理目录下的所有 YAML 文件"""
-    source_path = Path(source_dir)
-    output_path = Path(output_dir)
-
-    if not source_path.exists():
-        print(f"错误：源目录不存在 {source_dir}")
-        return
-
-    output_path.mkdir(parents=True, exist_ok=True)
-
-    yaml_files = list(source_path.rglob("*.yaml")) + list(source_path.rglob("*.yml"))
+    source_path: Path = Path(source_dir)
+    output_path: Path = Path(output_dir)
+    yaml_files: list[Path] = list(source_path.rglob("*.yaml"))
 
     if not yaml_files:
         print(f"警告：在 {source_dir} 中未找到 YAML 文件")
         return
+    else:
+        print(f"找到 {len(yaml_files)} 个 YAML 文件")
 
-    print(f"找到 {len(yaml_files)} 个 YAML 文件")
-
-    success_count = 0
-    error_count = 0
+    success_count: int = 0
+    error_count: int = 0
 
     for yaml_file in yaml_files:
         try:
-            relative_path = yaml_file.relative_to(source_path)
-            json_file = output_path / relative_path.with_suffix(".json")
+            relative_path: Path = yaml_file.relative_to(source_path)
+            json_file: Path = output_path / relative_path.with_suffix(".json")
             json_file.parent.mkdir(parents=True, exist_ok=True)
 
             json_data = convert_yaml_to_json(yaml_file)
@@ -81,7 +73,6 @@ def process_directory(source_dir: str, output_dir: str) -> None:
 
 
 def convert_yaml_to_json(yaml_path: Path) -> Dict[str, Any]:
-    """转换单个 YAML 文件为 sing-box JSON 数据结构"""
     with open(yaml_path, "r", encoding="utf-8") as f:
         yaml_data = yaml.safe_load(f)
 
@@ -111,7 +102,7 @@ def convert_yaml_to_json(yaml_path: Path) -> Dict[str, Any]:
 
         rules_map[key].append(value)
 
-    json_rules = [{key: values} for key, values in rules_map.items()]
+    json_rules: list[dict[str, list[Any]]] = [{key: values} for key, values in rules_map.items()]
     json_data: Dict[str, Any] = {
         "version": RULE_SET_VERSION,
         "rules": json_rules
@@ -120,28 +111,24 @@ def convert_yaml_to_json(yaml_path: Path) -> Dict[str, Any]:
     return json_data
 
 
-def parse_rule_line(line: str) -> tuple[str, str]:
-    """解析 Mihomo 规则行，返回 (规则类型, 规则值)"""
+def parse_rule_line(line: str) -> tuple[Optional[str], Optional[str]]:
     # 移除行内注释
     if "#" in line:
         line = line.split("#", 1)[0]
 
-    # 按逗号分割整个字符串
+    # 按逗号分割字符串
     parts = line.split(",")
-
-    # 如果分割后不足2部分, 直接跳过
     if len(parts) < 2:
-        return "", ""
+        return None, None
 
-    # 提取前两个部分：类型和值
-    rule_type = parts[0].strip()
-    rule_value = parts[1].strip().strip('"\'')
+    # 提取前两个部分: 类型和值
+    rule_type = parts[0].strip().strip("'\"")
+    rule_value = parts[1].strip().strip("'\"")
 
     return rule_type, rule_value
 
 
 def verify(rule_type: str, value: str) -> bool:
-    """总验证函数，根据规则类型调用对应的验证函数"""
     if rule_type in ["IP-CIDR", "IP-CIDR6", "SRC-IP-CIDR"]:
         return validate_ip_cidr(value)
     elif rule_type in ["DST-PORT", "SRC-PORT"]:
@@ -156,7 +143,6 @@ def verify(rule_type: str, value: str) -> bool:
 
 
 def validate_ip_cidr(value: str) -> bool:
-    """验证 IP CIDR 格式"""
     try:
         ipaddress.ip_network(value, strict=False)
         return True
@@ -165,7 +151,6 @@ def validate_ip_cidr(value: str) -> bool:
 
 
 def validate_port(value: str) -> bool:
-    """验证端口号（1-65535）"""
     try:
         port = int(value)
         return 1 <= port <= 65535
@@ -174,12 +159,10 @@ def validate_port(value: str) -> bool:
 
 
 def validate_network(value: str) -> bool:
-    """验证网络类型（tcp/udp）"""
     return value.lower() in ["tcp", "udp"]
 
 
 def validate_regex(value: str) -> bool:
-    """验证正则表达式是否符合 Golang RE2 格式"""
     try:
         re.compile(value)
 
@@ -203,7 +186,6 @@ def validate_regex(value: str) -> bool:
 
 
 def validate_domain(value: str) -> bool:
-    """验证域名格式（基础检查）"""
     if not value or len(value) > 253:
         return False
     return True

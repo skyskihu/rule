@@ -34,9 +34,6 @@ jobs:
           wget -qO- https://github.com/SagerNet/sing-box/releases/download/v1.11.15/sing-box-1.11.15-linux-amd64.tar.gz | tar -xz
           sudo install -m 0755 sing-box-1.11.15-linux-amd64/sing-box /usr/local/bin/sing-box
 
-          # wget -qO- https://github.com/MetaCubeX/mihomo/releases/download/v1.19.17/mihomo-linux-amd64-v1-v1.19.17.gz | gunzip -d > mihomo
-          # sudo install -m 0755 mihomo /usr/local/bin/mihomo
-
       - name: Create temporary directories
         run: |
           mkdir -p raw/sing-box raw/clash
@@ -46,17 +43,12 @@ jobs:
         run: python conversion_to_sing-box.py source raw/sing-box
 
       - name: Copy yaml to raw
-        run: cp -r source/* raw/clash/
+        run: cp -r source/* raw/clash
 
       - name: Compile JSON to SRS
         run: |
           chmod +x ./.github/compile_sing-box.sh
           ./.github/compile_sing-box.sh
-
-      # - name: Compile YAML to MRS
-      #   run: |
-      #     chmod +x ./.github/compile_sing-box.sh
-      #     ./.github/compile_clash.sh
 
       - name: Push raw branch
         run: |
