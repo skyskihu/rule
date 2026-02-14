@@ -33,7 +33,6 @@ payload:
   - DOMAIN-SUFFIX,myqcloud.com
 
   # China Banks
-  # > Agricultural Bank of China
   - DOMAIN-SUFFIX,abchina.com
   - DOMAIN-SUFFIX,abchina.com.cn
 
