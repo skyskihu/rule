@@ -1,24 +1,23 @@
 payload:
   # > Apple CDN
-  - PROCESS-NAME,storedownloadd
-  - DOMAIN,aod.itunes.apple.com
-  - DOMAIN,appldnld.apple.com
-  - DOMAIN,apptrailers.itunes.apple.com
-  - DOMAIN,gs-loc-cn.apple.com
-  - DOMAIN,iosapps.itunes.apple.com
   - DOMAIN,music.apple.com
+  - DOMAIN,swcdn.apple.com
+  - DOMAIN,appldnld.apple.com
+  - DOMAIN,gs-loc-cn.apple.com
+  - DOMAIN,aod.itunes.apple.com
   - DOMAIN,mvod.itunes.apple.com
+  - DOMAIN,iosapps.itunes.apple.com
   - DOMAIN,osxapps.itunes.apple.com
   - DOMAIN,supportdownload.apple.com
-  - DOMAIN,swcdn.apple.com
   - DOMAIN,updates-http.cdn-apple.com
+  - DOMAIN,apptrailers.itunes.apple.com
 
   # > Epic
   - DOMAIN-KEYWORD,epicgames
 
   # > Google
-  - DOMAIN,safebrowsing.googleapis.com
   - DOMAIN-SUFFIX,dl.google.com
+  - DOMAIN,safebrowsing.googleapis.com
 
   # > Microsoft
   - DOMAIN-SUFFIX,msftconnecttest.com
@@ -31,52 +30,55 @@ payload:
   - DOMAIN-SUFFIX,dl.playstation.net
 
   # > Steam
-  - DOMAIN,cm.steampowered.com
   - DOMAIN,ol.epicgames.com
-  - DOMAIN-SUFFIX,steamcontent.com
-  - DOMAIN-SUFFIX,steamserver.net
-
+  - DOMAIN,cm.steampowered.com
   - DOMAIN-SUFFIX,steamchina.com
+  - DOMAIN-SUFFIX,steamserver.net
+  - DOMAIN-SUFFIX,steamcontent.com
 
   - DOMAIN,csgo.wmsj.cn
   - DOMAIN,dota2.wmsj.cn
   - DOMAIN,wmsjsteam.com
 
-  - DOMAIN,dl.steam.clngaa.com
+  - DOMAIN,yif.gdtstream.com
+
   - DOMAIN,dl.steam.ksyna.com
+  - DOMAIN,dl.steam.clngaa.com
 
   - DOMAIN,gstore.val.manlaxy.com
   - DOMAIN,gstore.val.smogfly.com
 
-  - DOMAIN,st.dl.bscstorage.net
+  # 白山云 cdn
   - DOMAIN,st.dl.eccdnx.com
+  - DOMAIN,st.dl.bscstorage.net
   - DOMAIN,st.dl.pinyuncloud.com
 
+  # 网宿 cdn
+  - DOMAIN,steamstatic.com.8686c.com
+  - DOMAIN,steampowered.com.8686c.com
+
+  # 华为云 cdn
   - DOMAIN,steampipe.steamcontent.tnkjmec.com
 
-  - DOMAIN,steampowered.com.8686c.com
-  - DOMAIN,steamstatic.com.8686c.com
-
-  - DOMAIN,steambroadcast.akamaized.net
+  # akamai cdn
   - DOMAIN,steamcdn-a.akamaihd.net
-  - DOMAIN,steamcommunity-a.akamaihd.net
   - DOMAIN,steamstore-a.akamaihd.net
-  - DOMAIN,steamusercontent-a.akamaihd.net
+  - DOMAIN,steambroadcast.akamaized.net
+  - DOMAIN,steamcommunity-a.akamaihd.net
   - DOMAIN,steamuserimages-a.akamaihd.net
-
-  - DOMAIN,yif.gdtstream.com
+  - DOMAIN,steamusercontent-a.akamaihd.net
 
   # > Tesla
-  - DOMAIN,tesla-cdn.thron.cn
-  - DOMAIN,tesla-cdn.thron.com
-  - DOMAIN-SUFFIX,solarcity.com
+  - DOMAIN-SUFFIX,ts.la
   - DOMAIN-SUFFIX,tesla.cn
   - DOMAIN-SUFFIX,tesla.com
+  - DOMAIN,tesla-cdn.thron.cn
   - DOMAIN-SUFFIX,tesla.com.cn
+  - DOMAIN,tesla-cdn.thron.com
+  - DOMAIN-SUFFIX,solarcity.com
   - DOMAIN-SUFFIX,teslamotors.cn
   - DOMAIN-SUFFIX,teslamotors.com
   - DOMAIN-SUFFIX,teslamotors.com.cn
-  - DOMAIN-SUFFIX,ts.la
 
   # > UUBooster
   - PROCESS-NAME,UUBooster
@@ -88,32 +90,33 @@ payload:
   - DOMAIN-SUFFIX,xunlei.com
 
   # > Download
-  - PROCESS-NAME,aria2c.exe
-  - PROCESS-NAME,BitComet.exe
   - PROCESS-NAME,fdm.exe
-  - PROCESS-NAME,NetTransport.exe
-  - PROCESS-NAME,qbittorrent.exe
+  - PROCESS-NAME,aria2c.exe
   - PROCESS-NAME,Thunder.exe
-  - PROCESS-NAME,transmission-daemon.exe
-  - PROCESS-NAME,transmission-qt.exe
+  - PROCESS-NAME,BitComet.exe
   - PROCESS-NAME,uTorrent.exe
   - PROCESS-NAME,WebTorrent.exe
-  - PROCESS-NAME,aria2c
+  - PROCESS-NAME,qbittorrent.exe
+  - PROCESS-NAME,NetTransport.exe
+  - PROCESS-NAME,transmission-qt.exe
+  - PROCESS-NAME,transmission-daemon.exe
+
   - PROCESS-NAME,fdm
   - PROCESS-NAME,Folx
-  - PROCESS-NAME,NetTransport
-  - PROCESS-NAME,qbittorrent
-  - PROCESS-NAME,qbittorrent-nox
+  - PROCESS-NAME,aria2c
   - PROCESS-NAME,Thunder
-  - PROCESS-NAME,Transmission
   - PROCESS-NAME,uTorrent
   - PROCESS-NAME,WebTorrent
+  - PROCESS-NAME,qbittorrent
+  - PROCESS-NAME,NetTransport
+  - PROCESS-NAME,Transmission
+  - PROCESS-NAME,qbittorrent-nox
   - PROCESS-NAME,WebTorrent Helper
 
   # > Other
-  - DOMAIN-KEYWORD,announce
-  - DOMAIN-KEYWORD,torrent
   - DOMAIN-SUFFIX,smtp
+  - DOMAIN-KEYWORD,torrent
+  - DOMAIN-KEYWORD,announce
 
   # > UBI
   - DOMAIN,uplaypc-s-ubisoft.cdn.ubi.com
