@@ -7,7 +7,12 @@ on:
       - "source/**"
       - "conversion_to_sing-box.py"
       - ".github/**"
+
   workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: write
