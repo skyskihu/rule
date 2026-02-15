@@ -1,0 +1,34 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain": [
+        "cws-hulu.conviva.com",
+        "hulu.map.fastly.net",
+        "hulu.com.c.footprint.net",
+        "cs428.wpc.edgecastcdn.net"
+      ]
+    },
+    {
+      "domain_suffix": [
+        "hulu.com",
+        "huluad.com",
+        "huluim.com",
+        "huluqa.com",
+        "hulumail.com",
+        "hulustream.com",
+        "hulu.hb.omtrdc.net",
+        "hulu.sc.omtrdc.net"
+      ]
+    },
+    {
+      "ip_cidr": [
+        "8.28.124.0/23",
+        "199.60.116.0/24",
+        "199.200.48.0/22",
+        "208.91.156.0/22",
+        "2620:100:3000::/40"
+      ]
+    }
+  ]
+}

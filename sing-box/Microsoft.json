@@ -1,0 +1,40 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "microsoft",
+        "microsoft.com",
+        "microsoft.cn",
+        "office.com",
+        "office365.com",
+        "microsoftonline.com",
+        "microsoft365.com",
+        "outlook.com",
+        "live.com",
+        "hotmail.com",
+        "azure.com",
+        "azure.cn",
+        "windows.net",
+        "azureedge.net",
+        "trafficmanager.net",
+        "cloudapp.net",
+        "bing.com",
+        "biying.cn",
+        "msn.com",
+        "onedrive.com",
+        "sharepoint.com",
+        "teams.com",
+        "visualstudio.com",
+        "vscode.dev",
+        "nuget.org",
+        "powershellgallery.com",
+        "sysinternals.com",
+        "xbox.com",
+        "xboxlive.com",
+        "minecraft.net",
+        "mojang.com"
+      ]
+    }
+  ]
+}

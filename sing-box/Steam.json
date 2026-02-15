@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "s.team",
+        "steampowered.com",
+        "steamcommunity.com",
+        "steamgames.com",
+        "steamusercontent.com",
+        "steamstatic.com"
+      ]
+    }
+  ]
+}
