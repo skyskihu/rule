@@ -6,7 +6,6 @@ payload:
   - DOMAIN,aod-ssl.itunes.apple.com
   - DOMAIN,audio-ssl.itunes.apple.com
   - DOMAIN,streamingaudio.itunes.apple.com
-
   - DOMAIN-SUFFIX,applemusic.com
   - DOMAIN-SUFFIX,music.apple.com
 

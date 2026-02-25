@@ -12,11 +12,10 @@ payload:
   - DOMAIN,updates-http.cdn-apple.com
   - DOMAIN,apptrailers.itunes.apple.com
 
-  # > Epic
-  - DOMAIN-KEYWORD,epicgames
-
   # > Google
-  - DOMAIN-SUFFIX,dl.google.com
+  - DOMAIN,dl.google.com
+  - DOMAIN,dl.l.google.com
+  - DOMAIN,update.googleapis.com
   - DOMAIN,safebrowsing.googleapis.com
 
   # > Microsoft
@@ -69,12 +68,12 @@ payload:
   - DOMAIN,steamusercontent-a.akamaihd.net
 
   # > Tesla
+  - DOMAIN,tesla-cdn.thron.cn
+  - DOMAIN,tesla-cdn.thron.com
   - DOMAIN-SUFFIX,ts.la
   - DOMAIN-SUFFIX,tesla.cn
   - DOMAIN-SUFFIX,tesla.com
-  - DOMAIN,tesla-cdn.thron.cn
   - DOMAIN-SUFFIX,tesla.com.cn
-  - DOMAIN,tesla-cdn.thron.com
   - DOMAIN-SUFFIX,solarcity.com
   - DOMAIN-SUFFIX,teslamotors.cn
   - DOMAIN-SUFFIX,teslamotors.com
@@ -115,8 +114,6 @@ payload:
 
   # > Other
   - DOMAIN-SUFFIX,smtp
-  - DOMAIN-KEYWORD,torrent
-  - DOMAIN-KEYWORD,announce
 
   # > UBI
   - DOMAIN,uplaypc-s-ubisoft.cdn.ubi.com

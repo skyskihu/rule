@@ -76,6 +76,9 @@ payload:
   # > Cloudflare AI Gateway
   - DOMAIN,gateway.ai.cloudflare.com
 
+  # > openrouter
+  - DOMAIN-SUFFIX,openrouter.ai
+
   # > Augment
   - DOMAIN-SUFFIX,augmentcode.com
 

@@ -8,5 +8,5 @@ payload:
   - DOMAIN-SUFFIX,jwplayer.com
   - DOMAIN-SUFFIX,firebaseio.com
   - DOMAIN-SUFFIX,bootstrapcdn.com
-  - DOMAIN-SUFFIX,cognito-identity.us-east-1.amazonaws.com
   - DOMAIN-SUFFIX,mobileanalytics.us-east-1.amazonaws.com
+  - DOMAIN-SUFFIX,cognito-identity.us-east-1.amazonaws.com

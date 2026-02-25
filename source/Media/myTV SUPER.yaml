@@ -2,6 +2,3 @@ payload:
   # > myTV_SUPER
   - DOMAIN-SUFFIX,mytvsuper.com
   - DOMAIN-SUFFIX,tvb.com
-
-  - DOMAIN-KEYWORD,nowtv100
-  - DOMAIN-KEYWORD,rthklive

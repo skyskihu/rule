@@ -7,6 +7,3 @@ payload:
   - DOMAIN-SUFFIX,bbci.co.uk
   - DOMAIN-SUFFIX,bidi.net.uk
   - DOMAIN-SUFFIX,bbcfmt.hs.llnwd.net
-
-  - DOMAIN-KEYWORD,bbcfmt
-  - DOMAIN-KEYWORD,-uk-live.akamaized.net

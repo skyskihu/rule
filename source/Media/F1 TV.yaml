@@ -3,7 +3,6 @@ payload:
   - DOMAIN,f1prodlive.akamaized.net
   - DOMAIN,d2n9h2wits23hf.cloudfront.net
   - DOMAIN,mobile-collector.newrelic.com
-
   - DOMAIN-SUFFIX,f1play.com
   - DOMAIN-SUFFIX,bitmovin.com
   - DOMAIN-SUFFIX,formula1.com

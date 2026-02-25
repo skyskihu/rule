@@ -12,9 +12,8 @@ payload:
   - DOMAIN-SUFFIX,apple-mapkit.com
   - DOMAIN-SUFFIX,apple-cloudkit.com
   - DOMAIN-SUFFIX,icloud-content.com
-  - DOMAIN-KEYWORD,apple.com.akadns.net
-  - DOMAIN-KEYWORD,icloud.com.akadns.net
-
+  - DOMAIN-SUFFIX,apple.com.akadns.net
+  - DOMAIN-SUFFIX,icloud.com.akadns.net
   - IP-CIDR,17.0.0.0/8
   - IP-CIDR,63.92.224.0/19
   - IP-CIDR,65.199.22.0/23
@@ -29,6 +28,3 @@ payload:
   # > Apple News
   - DOMAIN-SUFFIX,apple.news
   - DOMAIN-SUFFIX,apple.comscoreresearch.com
-
-  # > Apple Maps
-  - PROCESS-NAME,com.apple.geod
