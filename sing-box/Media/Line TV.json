@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "linetv.tw",
+        "profile.line-scdn.net",
+        "d3c7rimkq79yfu.cloudfront.net"
+      ]
+    }
+  ]
+}

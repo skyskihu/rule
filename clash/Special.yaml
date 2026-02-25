@@ -1,0 +1,119 @@
+payload:
+  # > Apple CDN
+  - DOMAIN,music.apple.com
+  - DOMAIN,swcdn.apple.com
+  - DOMAIN,appldnld.apple.com
+  - DOMAIN,gs-loc-cn.apple.com
+  - DOMAIN,aod.itunes.apple.com
+  - DOMAIN,mvod.itunes.apple.com
+  - DOMAIN,iosapps.itunes.apple.com
+  - DOMAIN,osxapps.itunes.apple.com
+  - DOMAIN,supportdownload.apple.com
+  - DOMAIN,updates-http.cdn-apple.com
+  - DOMAIN,apptrailers.itunes.apple.com
+
+  # > Google
+  - DOMAIN,dl.google.com
+  - DOMAIN,dl.l.google.com
+  - DOMAIN,update.googleapis.com
+  - DOMAIN,safebrowsing.googleapis.com
+
+  # > Microsoft
+  - DOMAIN-SUFFIX,msftconnecttest.com
+
+  # > Proxy plugin
+  - PROCESS-NAME,v2ray
+  - PROCESS-NAME,ss-local
+
+  # > PlayStation
+  - DOMAIN-SUFFIX,dl.playstation.net
+
+  # > Steam
+  - DOMAIN,ol.epicgames.com
+  - DOMAIN,cm.steampowered.com
+  - DOMAIN-SUFFIX,steamchina.com
+  - DOMAIN-SUFFIX,steamserver.net
+  - DOMAIN-SUFFIX,steamcontent.com
+
+  - DOMAIN,csgo.wmsj.cn
+  - DOMAIN,dota2.wmsj.cn
+  - DOMAIN,wmsjsteam.com
+
+  - DOMAIN,yif.gdtstream.com
+
+  - DOMAIN,dl.steam.ksyna.com
+  - DOMAIN,dl.steam.clngaa.com
+
+  - DOMAIN,gstore.val.manlaxy.com
+  - DOMAIN,gstore.val.smogfly.com
+
+  # 白山云 cdn
+  - DOMAIN,st.dl.eccdnx.com
+  - DOMAIN,st.dl.bscstorage.net
+  - DOMAIN,st.dl.pinyuncloud.com
+
+  # 网宿 cdn
+  - DOMAIN,steamstatic.com.8686c.com
+  - DOMAIN,steampowered.com.8686c.com
+
+  # 华为云 cdn
+  - DOMAIN,steampipe.steamcontent.tnkjmec.com
+
+  # akamai cdn
+  - DOMAIN,steamcdn-a.akamaihd.net
+  - DOMAIN,steamstore-a.akamaihd.net
+  - DOMAIN,steambroadcast.akamaized.net
+  - DOMAIN,steamcommunity-a.akamaihd.net
+  - DOMAIN,steamuserimages-a.akamaihd.net
+  - DOMAIN,steamusercontent-a.akamaihd.net
+
+  # > Tesla
+  - DOMAIN,tesla-cdn.thron.cn
+  - DOMAIN,tesla-cdn.thron.com
+  - DOMAIN-SUFFIX,ts.la
+  - DOMAIN-SUFFIX,tesla.cn
+  - DOMAIN-SUFFIX,tesla.com
+  - DOMAIN-SUFFIX,tesla.com.cn
+  - DOMAIN-SUFFIX,solarcity.com
+  - DOMAIN-SUFFIX,teslamotors.cn
+  - DOMAIN-SUFFIX,teslamotors.com
+  - DOMAIN-SUFFIX,teslamotors.com.cn
+
+  # > UUBooster
+  - PROCESS-NAME,UUBooster
+  
+  # > WiFiman
+  - DOMAIN-SUFFIX,app-measurement.com
+
+  # > Xunlei
+  - DOMAIN-SUFFIX,xunlei.com
+
+  # > Download
+  - PROCESS-NAME,fdm.exe
+  - PROCESS-NAME,aria2c.exe
+  - PROCESS-NAME,Thunder.exe
+  - PROCESS-NAME,BitComet.exe
+  - PROCESS-NAME,uTorrent.exe
+  - PROCESS-NAME,WebTorrent.exe
+  - PROCESS-NAME,qbittorrent.exe
+  - PROCESS-NAME,NetTransport.exe
+  - PROCESS-NAME,transmission-qt.exe
+  - PROCESS-NAME,transmission-daemon.exe
+
+  - PROCESS-NAME,fdm
+  - PROCESS-NAME,Folx
+  - PROCESS-NAME,aria2c
+  - PROCESS-NAME,Thunder
+  - PROCESS-NAME,uTorrent
+  - PROCESS-NAME,WebTorrent
+  - PROCESS-NAME,qbittorrent
+  - PROCESS-NAME,NetTransport
+  - PROCESS-NAME,Transmission
+  - PROCESS-NAME,qbittorrent-nox
+  - PROCESS-NAME,WebTorrent Helper
+
+  # > Other
+  - DOMAIN-SUFFIX,smtp
+
+  # > UBI
+  - DOMAIN,uplaypc-s-ubisoft.cdn.ubi.com

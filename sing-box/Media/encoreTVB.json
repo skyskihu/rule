@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain": [
+        "videos-f.jwpsrv.com",
+        "content.jwplatform.com"
+      ]
+    },
+    {
+      "domain_suffix": [
+        "encoretvb.com"
+      ]
+    }
+  ]
+}

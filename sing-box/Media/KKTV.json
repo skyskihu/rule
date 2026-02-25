@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "kktv.me",
+        "kktv.com.tw"
+      ]
+    },
+    {
+      "domain": [
+        "kktv-theater.kk.stream"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "cn",
+        "tenpay.com",
+        "alipay.com",
+        "alipayobjects.com",
+        "qq.com",
+        "gtimg.com",
+        "wechat.com",
+        "tencent.com",
+        "jd.com",
+        "tmall.com",
+        "taobao.com",
+        "alibaba.com",
+        "weibo.com",
+        "zhihu.com",
+        "zhimg.com",
+        "douyin.com",
+        "qcloud.com",
+        "aliyun.com",
+        "alicdn.com",
+        "aliyuncs.com",
+        "myqcloud.com",
+        "abchina.com",
+        "ecitic.com",
+        "ecitic.net",
+        "citicbank.com",
+        "ccb.com",
+        "cebbank.com",
+        "cmbimg.com",
+        "mbcloud.com",
+        "cmbchina.com",
+        "pingan.com"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain": [
+        "gspe1-ssl.ls.apple.com",
+        "apple.comscoreresearch.com",
+        "gateway.icloud.com",
+        "news-edge.apple.com",
+        "news-client.apple.com",
+        "news-events.apple.com"
+      ]
+    },
+    {
+      "domain_suffix": [
+        "apple.news",
+        "cvws.apple-dns.net",
+        "news.apple-dns.net",
+        "news.iadsdk.apple.com"
+      ]
+    }
+  ]
+}

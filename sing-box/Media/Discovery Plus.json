@@ -1,0 +1,17 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "litix.io",
+        "fwmrm.net",
+        "uplynk.com",
+        "disco-api.com",
+        "getblueshift.com",
+        "discoveryplus.com",
+        "mobile-collector.newrelic.com",
+        "content-ause1-ur-discovery1.uplynk.com"
+      ]
+    }
+  ]
+}
