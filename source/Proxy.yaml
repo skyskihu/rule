@@ -1,4 +1,7 @@
 payload:
+  # > onedrive
+  - DOMAIN,onedrive.live.com
+
   # > Blizzard
   - DOMAIN,cdp.cloud.unity3d.com
   - DOMAIN-SUFFIX,battle.net
