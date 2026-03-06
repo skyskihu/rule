@@ -9,7 +9,7 @@ payload:
   - DOMAIN-SUFFIX,steamcontent.com
   - DOMAIN-SUFFIX,steamstatic.com
 
-  # > Steam ip
+  # > valve ip
   # According to AS32590 FAQ https://as32590.net/ipv4.txt
   # According to AS32590 FAQ https://as32590.net/ipv6.txt
   - IP-CIDR,45.121.184.0/22

@@ -21,10 +21,6 @@ payload:
   # > Microsoft
   - DOMAIN-SUFFIX,msftconnecttest.com
 
-  # > Proxy plugin
-  - PROCESS-NAME,v2ray
-  - PROCESS-NAME,ss-local
-
   # > PlayStation
   - DOMAIN-SUFFIX,dl.playstation.net
 
@@ -79,14 +75,24 @@ payload:
   - DOMAIN-SUFFIX,teslamotors.com
   - DOMAIN-SUFFIX,teslamotors.com.cn
 
-  # > UUBooster
-  - PROCESS-NAME,UUBooster
-  
   # > WiFiman
   - DOMAIN-SUFFIX,app-measurement.com
 
   # > Xunlei
   - DOMAIN-SUFFIX,xunlei.com
+
+  # > Other
+  - DOMAIN-SUFFIX,smtp
+
+  # > UBI
+  - DOMAIN,uplaypc-s-ubisoft.cdn.ubi.com
+
+  # > UUBooster
+  - PROCESS-NAME,UUBooster
+
+  # > Proxy plugin
+  - PROCESS-NAME,v2ray
+  - PROCESS-NAME,ss-local
 
   # > Download
   - PROCESS-NAME,fdm.exe
@@ -111,9 +117,3 @@ payload:
   - PROCESS-NAME,Transmission
   - PROCESS-NAME,qbittorrent-nox
   - PROCESS-NAME,WebTorrent Helper
-
-  # > Other
-  - DOMAIN-SUFFIX,smtp
-
-  # > UBI
-  - DOMAIN,uplaypc-s-ubisoft.cdn.ubi.com
