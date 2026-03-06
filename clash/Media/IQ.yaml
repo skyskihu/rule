@@ -1,0 +1,6 @@
+payload:
+  - DOMAIN,intl-rcd.iqiyi.com
+  - DOMAIN,intl-subscription.iqiyi.com
+  - DOMAIN-SUFFIX,iq.com
+  - DOMAIN-SUFFIX,intl.iqiyi.com
+  - DOMAIN-SUFFIX,inter.iqiyi.com

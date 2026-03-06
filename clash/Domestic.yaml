@@ -1,0 +1,55 @@
+payload:
+  # > CN
+  - DOMAIN-SUFFIX,cn
+
+  # > Payment
+  - DOMAIN-SUFFIX,tenpay.com
+  - DOMAIN-SUFFIX,alipay.com
+  - DOMAIN-SUFFIX,alipayobjects.com
+
+  # > Tencent
+  - DOMAIN-SUFFIX,qq.com
+  - DOMAIN-SUFFIX,gtimg.com
+  - DOMAIN-SUFFIX,wechat.com
+  - DOMAIN-SUFFIX,tencent.com
+
+  # > E-commerce
+  - DOMAIN-SUFFIX,jd.com
+  - DOMAIN-SUFFIX,tmall.com
+  - DOMAIN-SUFFIX,taobao.com
+  - DOMAIN-SUFFIX,alibaba.com
+
+  # > Social & Content
+  - DOMAIN-SUFFIX,weibo.com
+  - DOMAIN-SUFFIX,zhihu.com
+  - DOMAIN-SUFFIX,zhimg.com
+  - DOMAIN-SUFFIX,douyin.com
+
+  # > Cloud Service
+  - DOMAIN-SUFFIX,qcloud.com
+  - DOMAIN-SUFFIX,aliyun.com
+  - DOMAIN-SUFFIX,alicdn.com
+  - DOMAIN-SUFFIX,aliyuncs.com
+  - DOMAIN-SUFFIX,myqcloud.com
+
+  # China Banks
+  - DOMAIN-SUFFIX,abchina.com
+
+  # > China Citic Bank
+  - DOMAIN-SUFFIX,ecitic.com
+  - DOMAIN-SUFFIX,ecitic.net
+  - DOMAIN-SUFFIX,citicbank.com
+
+  # > China Construction Bank
+  - DOMAIN-SUFFIX,ccb.com
+
+  # > China Everbright Bank
+  - DOMAIN-SUFFIX,cebbank.com
+
+  # > China Merchants Bank
+  - DOMAIN-SUFFIX,cmbimg.com
+  - DOMAIN-SUFFIX,mbcloud.com
+  - DOMAIN-SUFFIX,cmbchina.com
+
+  # > Ping An Bank
+  - DOMAIN-SUFFIX,pingan.com

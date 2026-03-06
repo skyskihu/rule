@@ -1,0 +1,20 @@
+payload:
+  # RFC1918 IPv4 private networks https://datatracker.ietf.org/doc/html/rfc1918
+  - IP-CIDR,10.0.0.0/8
+  - IP-CIDR,172.16.0.0/12
+  - IP-CIDR,192.168.0.0/16
+
+  # RFC1122 IPv4 loopback https://datatracker.ietf.org/doc/html/rfc1122
+  - IP-CIDR,127.0.0.0/8
+
+  # RFC3927 IPv4 link-local https://datatracker.ietf.org/doc/html/rfc3927
+  - IP-CIDR,169.254.0.0/16
+
+  # RFC4193 IPv6 Unique Local Address https://datatracker.ietf.org/doc/html/rfc4193
+  - IP-CIDR6,fc00::/7
+
+  # RFC4291 IPv6 loopback https://datatracker.ietf.org/doc/html/rfc4291
+  - IP-CIDR6,::1/128
+
+  # RFC4291 IPv6 link-local https://datatracker.ietf.org/doc/html/rfc4291
+  - IP-CIDR6,fe80::/10

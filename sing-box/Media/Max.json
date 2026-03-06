@@ -1,0 +1,30 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "max.com",
+        "ngtv.io",
+        "hbo.com",
+        "hbomax.com",
+        "discomax.com",
+        "brightline.tv",
+        "arkoselabs.com",
+        "cdn.turner.com",
+        "pypestream.com",
+        "warnermediacdn.com",
+        "branch.io"
+      ]
+    },
+    {
+      "domain": [
+        "sdk.iad-01.braze.com",
+        "app-analytics-services.com",
+        "o0137140.ingest.us.sentry.io",
+        "kpck4q-launches.appsflyersdk.com",
+        "out053a3bejgh7t0phqa0csou.litix.io",
+        "kpck4q-skadsdkless.appsflyersdk.com"
+      ]
+    }
+  ]
+}

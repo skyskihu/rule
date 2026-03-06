@@ -1,0 +1,7 @@
+payload:
+  # > Hulu(フールー)
+  - DOMAIN-SUFFIX,hulu.jp
+  - DOMAIN-SUFFIX,happyon.jp
+  - DOMAIN-SUFFIX,streaks.jp
+  - DOMAIN-SUFFIX,yb.uncn.jp
+  - DOMAIN-SUFFIX,prod.hjholdings.tv

@@ -1,0 +1,14 @@
+payload:
+  # > Hulu
+  - DOMAIN,cws-hulu.conviva.com
+  - DOMAIN,hulu.map.fastly.net
+  - DOMAIN,hulu.com.c.footprint.net
+  - DOMAIN,cs428.wpc.edgecastcdn.net
+  - DOMAIN-SUFFIX,hulu.com
+  - DOMAIN-SUFFIX,huluad.com
+  - DOMAIN-SUFFIX,huluim.com
+  - DOMAIN-SUFFIX,huluqa.com
+  - DOMAIN-SUFFIX,hulumail.com
+  - DOMAIN-SUFFIX,hulustream.com
+  - DOMAIN-SUFFIX,hulu.hb.omtrdc.net
+  - DOMAIN-SUFFIX,hulu.sc.omtrdc.net
