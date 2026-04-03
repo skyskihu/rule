@@ -2,6 +2,9 @@ payload:
   # > CN
   - DOMAIN-SUFFIX,cn
 
+  # Google CDN in China
+  - DOMAIN-REGEX,^r+[0-9]+(---|\.)sn-(2x3|ni5|j5o)\w{5}\.xn--ngstr-lra8j\.com$
+
   # > Payment
   - DOMAIN-SUFFIX,tenpay.com
   - DOMAIN-SUFFIX,alipay.com
