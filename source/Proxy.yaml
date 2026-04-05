@@ -2,7 +2,7 @@ payload:
   # > onedrive
   - DOMAIN,onedrive.live.com
 
-  # Google
+  # > Google
   - DOMAIN-SUFFIX,services.googleapis.cn
 
   # > Blizzard

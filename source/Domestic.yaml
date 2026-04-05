@@ -2,7 +2,7 @@ payload:
   # > CN
   - DOMAIN-SUFFIX,cn
 
-  # Google CDN in China
+  # > Google CDN in China
   - DOMAIN-REGEX,^r+[0-9]+(---|\.)sn-(2x3|ni5|j5o)\w{5}\.xn--ngstr-lra8j\.com$
 
   # > Payment
@@ -28,14 +28,100 @@ payload:
   - DOMAIN-SUFFIX,zhimg.com
   - DOMAIN-SUFFIX,douyin.com
 
-  # > Cloud Service
-  - DOMAIN-SUFFIX,qcloud.com
+  # > Alibaba Cloud
   - DOMAIN-SUFFIX,aliyun.com
   - DOMAIN-SUFFIX,alicdn.com
   - DOMAIN-SUFFIX,aliyuncs.com
-  - DOMAIN-SUFFIX,myqcloud.com
+  - DOMAIN-SUFFIX,aliyundrive.com
 
-  # China Banks
+  # > Tencent Cloud
+  - DOMAIN-SUFFIX,qcloud.com
+  - DOMAIN-SUFFIX,myqcloud.com
+  - DOMAIN-SUFFIX,tencentcloud.com
+  - DOMAIN-SUFFIX,cloud.tencent.com
+  - DOMAIN-SUFFIX,tencentcloudapi.com
+
+  # > Volcengine
+  - DOMAIN-SUFFIX,snssdk.com
+  - DOMAIN-SUFFIX,bytelb.com
+  - DOMAIN-SUFFIX,volces.com
+  - DOMAIN-SUFFIX,bytecdn.cn
+  - DOMAIN-SUFFIX,byteimg.com
+  - DOMAIN-SUFFIX,bytedns.net
+  - DOMAIN-SUFFIX,bytedance.com
+  - DOMAIN-SUFFIX,volcengine.com
+
+  # > Baidu Cloud
+  - DOMAIN-SUFFIX,bdydns.com
+  - DOMAIN-SUFFIX,bcebos.com
+  - DOMAIN-SUFFIX,baidubce.com
+  - DOMAIN-SUFFIX,bdstatic.com
+
+  # > Huawei Cloud
+  - DOMAIN-SUFFIX,huaweicloud.cn
+  - DOMAIN-SUFFIX,huaweicloud.com
+  - DOMAIN-SUFFIX,myhuaweicloud.com
+
+  # > China Telecom Cloud
+  - DOMAIN-SUFFIX,ctyun.cn
+  - DOMAIN-SUFFIX,ctycdn.com
+
+  # > China Unicom Cloud
+  - DOMAIN-SUFFIX,wocloud.cn
+  - DOMAIN-SUFFIX,cucloud.cn
+  - DOMAIN-SUFFIX,chinaunicom.cn
+
+  # > China Mobile Cloud
+  - DOMAIN-SUFFIX,cdn.10086.cn
+  - DOMAIN-SUFFIX,cmcc-cloud.cn
+  - DOMAIN-SUFFIX,ecloud.10086.cn
+  - DOMAIN-SUFFIX,chinamobileltd.com
+
+  # > JD Cloud
+  - DOMAIN-SUFFIX,jdcdn.com
+  - DOMAIN-SUFFIX,jcloud.com
+  - DOMAIN-SUFFIX,jdcloud.com
+  - DOMAIN-SUFFIX,jcloud-cdn.com
+  - DOMAIN-SUFFIX,jdcloud-api.com
+  - DOMAIN-SUFFIX,jdcloud-oss.com
+
+  # > Kingsoft Cloud
+  - DOMAIN-SUFFIX,ksyun.com
+  - DOMAIN-SUFFIX,ks-cdn.com
+  - DOMAIN-SUFFIX,ksyuncdn.com
+  - DOMAIN-SUFFIX,ksyunapi.com
+
+  # > UCloud
+  - DOMAIN-SUFFIX,ucloud.cn
+  - DOMAIN-SUFFIX,ufileos.com
+  - DOMAIN-SUFFIX,ucloud.com.cn
+  - DOMAIN-SUFFIX,ucloudapi.com
+
+  # > QingCloud
+  - DOMAIN-SUFFIX,qingstor.com
+  - DOMAIN-SUFFIX,qingcloud.com
+
+  # > Qiniu Cloud
+  - DOMAIN-SUFFIX,qnssl.com
+  - DOMAIN-SUFFIX,qiniu.com
+  - DOMAIN-SUFFIX,qiniucdn.com
+  - DOMAIN-SUFFIX,qiniudns.com
+
+  # > Upyun
+  - DOMAIN-SUFFIX,upyun.com
+  - DOMAIN-SUFFIX,upaiyun.com
+
+  # > Wangsu CDN
+  - DOMAIN-SUFFIX,wsdvs.com
+  - DOMAIN-SUFFIX,wscdns.com
+  - DOMAIN-SUFFIX,qtlcdn.com
+
+  # > Baishan CDN
+  - DOMAIN-SUFFIX,bsgslb.cn
+  - DOMAIN-SUFFIX,trpcdn.net
+  - DOMAIN-SUFFIX,qingcdn.com
+
+  # > China Banks
   - DOMAIN-SUFFIX,abchina.com
 
   # > China Citic Bank
