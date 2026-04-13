@@ -24,23 +24,33 @@ payload:
   # > PlayStation
   - DOMAIN-SUFFIX,dl.playstation.net
 
-  # > Steam
+  # epic
   - DOMAIN,ol.epicgames.com
+
+  # > Steam
   - DOMAIN,cm.steampowered.com
   - DOMAIN-SUFFIX,steamchina.com
   - DOMAIN-SUFFIX,steamserver.net
   - DOMAIN-SUFFIX,steamcontent.com
 
+  # 完美世界
   - DOMAIN,csgo.wmsj.cn
   - DOMAIN,dota2.wmsj.cn
   - DOMAIN,wmsjsteam.com
 
+  # 广大通 cdn
   - DOMAIN,yif.gdtstream.com
 
+  # 金山云 cdn
   - DOMAIN,dl.steam.ksyna.com
+
+  # 初联 cdn
   - DOMAIN,dl.steam.clngaa.com
 
+  # 廊坊数云 cdn
   - DOMAIN,gstore.val.manlaxy.com
+
+  # 玖外璧 cdn
   - DOMAIN,gstore.val.smogfly.com
 
   # 白山云 cdn
@@ -63,36 +73,15 @@ payload:
   - DOMAIN,steamuserimages-a.akamaihd.net
   - DOMAIN,steamusercontent-a.akamaihd.net
 
-  # > Tesla
-  - DOMAIN,tesla-cdn.thron.cn
-  - DOMAIN,tesla-cdn.thron.com
-  - DOMAIN-SUFFIX,ts.la
-  - DOMAIN-SUFFIX,tesla.cn
-  - DOMAIN-SUFFIX,tesla.com
-  - DOMAIN-SUFFIX,tesla.com.cn
-  - DOMAIN-SUFFIX,solarcity.com
-  - DOMAIN-SUFFIX,teslamotors.cn
-  - DOMAIN-SUFFIX,teslamotors.com
-  - DOMAIN-SUFFIX,teslamotors.com.cn
-
-  # > WiFiman
-  - DOMAIN-SUFFIX,app-measurement.com
+  # > UBI
+  - DOMAIN,uplaypc-s-ubisoft.cdn.ubi.com
 
   # > Xunlei
   - DOMAIN-SUFFIX,xunlei.com
 
-  # > Other
-  - DOMAIN-SUFFIX,smtp
-
-  # > UBI
-  - DOMAIN,uplaypc-s-ubisoft.cdn.ubi.com
-
   # > UUBooster
   - PROCESS-NAME,UUBooster
-
-  # > Proxy plugin
-  - PROCESS-NAME,v2ray
-  - PROCESS-NAME,ss-local
+  - PROCESS-NAME,UUBooster.exe
 
   # > Download
   - PROCESS-NAME,fdm.exe
@@ -107,13 +96,11 @@ payload:
   - PROCESS-NAME,transmission-daemon.exe
 
   - PROCESS-NAME,fdm
-  - PROCESS-NAME,Folx
   - PROCESS-NAME,aria2c
   - PROCESS-NAME,Thunder
+  - PROCESS-NAME,BitComet
   - PROCESS-NAME,uTorrent
   - PROCESS-NAME,WebTorrent
   - PROCESS-NAME,qbittorrent
   - PROCESS-NAME,NetTransport
   - PROCESS-NAME,Transmission
-  - PROCESS-NAME,qbittorrent-nox
-  - PROCESS-NAME,WebTorrent Helper
