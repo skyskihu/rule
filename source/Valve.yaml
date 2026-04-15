@@ -26,3 +26,6 @@ payload:
   - IP-CIDR6,2404:3fc0::/32
   - IP-CIDR6,2602:801:f000::/40
   - IP-CIDR6,2a01:bc80::/32
+
+  # > other
+  - DOMAIN,steam-chat.com
