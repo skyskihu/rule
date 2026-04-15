@@ -36,8 +36,8 @@ jobs:
         run: |
           pip install pyyaml
 
-          wget -qO- https://github.com/SagerNet/sing-box/releases/download/v1.11.15/sing-box-1.11.15-linux-amd64.tar.gz | tar -xz
-          sudo install -m 0755 sing-box-1.11.15-linux-amd64/sing-box /usr/local/bin/sing-box
+          wget -qO- https://github.com/SagerNet/sing-box/releases/download/v1.13.8/sing-box-1.13.8-linux-amd64.tar.gz | tar -xz
+          sudo install -m 0755 sing-box-1.13.8-linux-amd64/sing-box /usr/local/bin/sing-box
 
       - name: Create temporary directories
         run: |
