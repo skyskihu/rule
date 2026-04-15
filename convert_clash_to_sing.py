@@ -8,7 +8,7 @@ from typing import Dict, Any, Optional
 
 import yaml
 
-RULE_SET_VERSION = 3
+RULE_SET_VERSION = 4
 
 RULE_TYPE_MAP: Dict[str, str] = {
     "DOMAIN": "domain",
