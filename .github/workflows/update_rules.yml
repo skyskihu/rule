@@ -5,7 +5,7 @@ on:
     branches: [ main ]
     paths:
       - "source/**"
-      - "conversion_to_sing-box.py"
+      - "convert_clash_to_sing.py"
       - ".github/**"
 
   workflow_dispatch:
@@ -45,15 +45,15 @@ jobs:
           mkdir -p compile/sing-box compile/clash
 
       - name: Convert sing-box format
-        run: python conversion_to_sing-box.py source raw/sing-box
+        run: python convert_clash_to_sing.py source raw/sing-box
 
       - name: Copy yaml to raw
         run: cp -r source/* raw/clash
 
       - name: Compile JSON to SRS
         run: |
-          chmod +x ./.github/compile_sing-box.sh
-          ./.github/compile_sing-box.sh
+          chmod +x ./.github/compile_sing.sh
+          ./.github/compile_sing.sh
 
       - name: Push raw branch
         run: |
