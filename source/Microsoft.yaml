@@ -3,6 +3,7 @@ payload:
   - DOMAIN-SUFFIX,microsoft
   - DOMAIN-SUFFIX,microsoft.cn
   - DOMAIN-SUFFIX,microsoft.com
+  - DOMAIN-SUFFIX,windowsupdate.com
 
   # > Office
   - DOMAIN-SUFFIX,office.com

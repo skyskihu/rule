@@ -1,0 +1,64 @@
+payload:
+  # > bilibili
+  - DOMAIN-SUFFIX,szbdyd.com
+  - DOMAIN,upos-sz-302ppio.bilivideo.com
+  - DOMAIN,upos-sz-302kodo.bilivideo.com
+  - DOMAIN-SUFFIX,mcdn.bilivideo.cn
+
+  # > 抖音
+  - DOMAIN,stun.douyucdn.cn
+  - DOMAIN-SUFFIX,p2cdn.com
+  - DOMAIN,stun1.douyucdn.cn
+  - DOMAIN-SUFFIX,p2plog.douyucdn.cn
+  - DOMAIN-SUFFIX,p2perrorlog.douyucdn.cn
+  - DOMAIN-WILDCARD,p2p-*.douyucdn.cn
+  - DOMAIN-WILDCARD,stun*.douyucdn.cn
+  - DOMAIN-WILDCARD,dyp2p-*.douyucdn.cn
+  - DOMAIN-WILDCARD,p2plive-*.douyucdn.cn
+  - DOMAIN-WILDCARD,p2pchunk-*.douyucdn.cn
+
+  # > 虎牙
+  - DOMAIN-SUFFIX,p2p.huya.com
+  - DOMAIN,livewebbs2pcdn.msstatic.com
+  - DOMAIN,qn-cdnfile1pcdn.msstatic.com
+
+  # > 快手
+  - DOMAIN-SUFFIX,pcdn.yximgs.com
+  - DOMAIN-KEYWORD,-p2p.pull.yximgs.com
+  - DOMAIN-KEYWORD,-p2p-v2.pull.yximgs.com
+
+  # > tencent
+  - DOMAIN-SUFFIX,p2p.qq.com
+  - DOMAIN-SUFFIX,p2ptun.qq.com
+  - DOMAIN-SUFFIX,p2pupdate.gamedl.qq.com
+  - DOMAIN-SUFFIX,p2pupgrade.gamedl.qq.com
+  - DOMAIN-WILDCARD,p2p*.qq.com
+
+  # > PPIO
+  - DOMAIN-SUFFIX,ppio.cloud
+  - DOMAIN-SUFFIX,nexusedgeio.com
+
+  # > YFCloud
+  - DOMAIN-SUFFIX,yfp2p.net
+  - DOMAIN-SUFFIX,yfcdn.net
+  - DOMAIN-SUFFIX,yfcloud.com
+
+  # > 白山云
+  - DOMAIN-SUFFIX,bsccdn.net
+  - DOMAIN-SUFFIX,saxysec.com
+
+  # > 网心云
+  - DOMAIN-SUFFIX,xycdn.com
+  - DOMAIN-SUFFIX,uhabo.com
+  - DOMAIN-SUFFIX,pkoplink.com
+  - DOMAIN-SUFFIX,kuiniuca.com
+  - DOMAIN-SUFFIX,tianwenca.com
+  - DOMAIN-SUFFIX,onethingpcs.com
+  - DOMAIN-SUFFIX,mountaintoys.cn
+
+  # > niulink
+  - DOMAIN-SUFFIX,ietheivaicai.com
+
+  # > other
+  - DOMAIN-SUFFIX,cdnnodedns.cn
+
