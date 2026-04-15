@@ -72,13 +72,13 @@ payload:
   - DOMAIN-SUFFIX,res.office365.com
   - DOMAIN-SUFFIX,rp.afd.azureedge-test.net
   - DOMAIN-SUFFIX,z01.azurefd.net
-  - DOMAIN-WILDCARD,*-afd.azurefd.net
-  - DOMAIN-WILDCARD,*-canary.azurecloudapp.de
-  - DOMAIN-WILDCARD,*-canary.netmon.azure.com
-  - DOMAIN-WILDCARD,*-canary.netmon.azure.us
-  - DOMAIN-WILDCARD,*-canary.netmon.chinacloudapi.cn
-  - DOMAIN-WILDCARD,*-canary-opaph.netmon.azure.com
-  - DOMAIN-WILDCARD,*-canary-opaph.netmon.azure.us
+  - DOMAIN-SUFFIX,-afd.azurefd.net
+  - DOMAIN-SUFFIX,-canary.azurecloudapp.de
+  - DOMAIN-SUFFIX,-canary.netmon.azure.com
+  - DOMAIN-SUFFIX,-canary.netmon.azure.us
+  - DOMAIN-SUFFIX,-canary.netmon.chinacloudapi.cn
+  - DOMAIN-SUFFIX,-canary-opaph.netmon.azure.com
+  - DOMAIN-SUFFIX,-canary-opaph.netmon.azure.us
 
   # > other
   - DOMAIN-SUFFIX,windowsupdate.com
