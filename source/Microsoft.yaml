@@ -45,7 +45,7 @@ payload:
   - DOMAIN-SUFFIX,minecraft.net
 
   # > MOI
-  # According to https://support.microsoft.com/zh-hk/windows/%E5%9B%A0%E7%89%B9%E7%B6%B2%E6%9C%8D%E5%8B%99%E5%9C%B0%E5%9C%96-f35b4284-09a9-45a1-830b-3c9a953b965d
+  # According to https://support.microsoft.com/en-us/windows/map-of-the-internet-services-f35b4284-09a9-45a1-830b-3c9a953b965d
   - DOMAIN,fp.msedge.net
   - DOMAIN,afd.azureedge.net
   - DOMAIN,afd.azureedge.us
