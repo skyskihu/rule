@@ -5,10 +5,10 @@ payload:
   - DOMAIN,upos-sz-302kodo.bilivideo.com
   - DOMAIN-SUFFIX,mcdn.bilivideo.cn
 
-  # > 抖音
+  # > 斗鱼
   - DOMAIN,stun.douyucdn.cn
-  - DOMAIN-SUFFIX,p2cdn.com
   - DOMAIN,stun1.douyucdn.cn
+  - DOMAIN-SUFFIX,p2cdn.com
   - DOMAIN-SUFFIX,p2plog.douyucdn.cn
   - DOMAIN-SUFFIX,p2perrorlog.douyucdn.cn
   - DOMAIN-WILDCARD,p2p-*.douyucdn.cn
@@ -17,15 +17,13 @@ payload:
   - DOMAIN-WILDCARD,p2plive-*.douyucdn.cn
   - DOMAIN-WILDCARD,p2pchunk-*.douyucdn.cn
 
+  # 芒果 TV
+  - DOMAIN,stun.hitv.com
+
   # > 虎牙
   - DOMAIN-SUFFIX,p2p.huya.com
   - DOMAIN,livewebbs2pcdn.msstatic.com
   - DOMAIN,qn-cdnfile1pcdn.msstatic.com
-
-  # > 快手
-  - DOMAIN-SUFFIX,pcdn.yximgs.com
-  - DOMAIN-KEYWORD,-p2p.pull.yximgs.com
-  - DOMAIN-KEYWORD,-p2p-v2.pull.yximgs.com
 
   # > tencent
   - DOMAIN-SUFFIX,p2p.qq.com
