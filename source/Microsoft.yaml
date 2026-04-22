@@ -81,5 +81,6 @@ payload:
   - DOMAIN-SUFFIX,-canary-opaph.netmon.azure.us
 
   # > other
+  - DOMAIN-SUFFIX,signalr.net
   - DOMAIN-SUFFIX,windows.com
   - DOMAIN-SUFFIX,windowsupdate.com
