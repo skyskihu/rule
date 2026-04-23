@@ -22,6 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      SING_MAX_RULE_SET_VERSION: 5
 
     steps:
       - name: Checkout code
@@ -36,16 +37,18 @@ jobs:
         run: |
           pip install pyyaml
 
-          wget -qO- https://github.com/SagerNet/sing-box/releases/download/v1.13.8/sing-box-1.13.8-linux-amd64.tar.gz | tar -xz
-          sudo install -m 0755 sing-box-1.13.8-linux-amd64/sing-box /usr/local/bin/sing-box
+          wget -qO- https://github.com/SagerNet/sing-box/releases/download/v1.14.0-alpha.17/sing-box-1.14.0-alpha.17-linux-amd64.tar.gz | tar -xz
+          sudo install -m 0755 sing-box-1.14.0-alpha.17-linux-amd64/sing-box /usr/local/bin/sing-box
 
       - name: Create temporary directories
         run: |
-          mkdir -p raw/sing-box raw/clash
-          mkdir -p compile/sing-box compile/clash
+          mkdir -p raw/sing-box
+          mkdir -p raw/clash
+          mkdir -p compile/sing-box
+          mkdir -p compile/clash
 
       - name: Convert sing-box format
-        run: python convert_clash_to_sing.py source raw/sing-box
+        run: python convert_clash_to_sing.py
 
       - name: Copy yaml to raw
         run: cp -r source/* raw/clash

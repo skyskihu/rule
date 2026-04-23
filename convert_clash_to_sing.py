@@ -1,6 +1,6 @@
-import argparse
 import ipaddress
 import json
+import os
 import re
 from collections import defaultdict
 from pathlib import Path
@@ -8,7 +8,8 @@ from typing import Dict, Any, Optional
 
 import yaml
 
-RULE_SET_VERSION = 4
+SOURCE_DIR = "source"
+OUTPUT_DIR = "raw/sing-box"
 
 RULE_TYPE_MAP: Dict[str, str] = {
     "DOMAIN": "domain",
@@ -28,55 +29,46 @@ RULE_TYPE_MAP: Dict[str, str] = {
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(
-        formatter_class=argparse.RawDescriptionHelpFormatter,
-    )
-    parser.add_argument("source", help="源目录路径(包含 YAML 文件)")
-    parser.add_argument("output", help="输出目录路径(保存 JSON 文件)")
-
-    args = parser.parse_args()
-    process_directory(args.source, args.output)
-
-
-def process_directory(source_dir: str, output_dir: str) -> None:
-    source_path: Path = Path(source_dir)
-    output_path: Path = Path(output_dir)
-    yaml_files: list[Path] = list(source_path.rglob("*.yaml"))
-
-    if not yaml_files:
-        print(f"警告：在 {source_dir} 中未找到 YAML 文件")
+    # args
+    max_version = int(os.environ.get("SING_MAX_RULE_SET_VERSION"))
+    if not max_version:
+        print("没有设置环境变量: SING_MAX_RULE_SET_VERSION")
         return
-    else:
-        print(f"找到 {len(yaml_files)} 个 YAML 文件")
 
-    success_count: int = 0
-    error_count: int = 0
+    source_path: Path = Path(SOURCE_DIR)
+    output_path: Path = Path(OUTPUT_DIR)
 
-    for yaml_file in yaml_files:
-        try:
-            relative_path: Path = yaml_file.relative_to(source_path)
-            json_file: Path = output_path / relative_path.with_suffix(".json")
-            json_file.parent.mkdir(parents=True, exist_ok=True)
+    yaml_files: list[Path] = list(source_path.rglob("*.yaml"))
+    print(f"找到 {len(yaml_files)} 个 YAML 文件")
 
-            json_data = convert_yaml_to_json(yaml_file)
+    for version in range(1, max_version + 1):
+        success_count: int = 0
 
-            with open(json_file, "w", encoding="utf-8") as f:
-                json.dump(json_data, f, ensure_ascii=False, indent=2)
+        for yaml_file in yaml_files:
+            try:
+                relative_path: Path = yaml_file.relative_to(source_path)
+                sing_file: Path = output_path / f"version{version}" / relative_path.with_suffix(".json")
+                sing_file.parent.mkdir(parents=True, exist_ok=True)
 
-            success_count += 1
+                with open(yaml_file, "r", encoding="utf-8") as f:
+                    sing_data = convert_clash_to_sing(yaml.safe_load(f), version)
 
-        except Exception as e:
-            print(f"转换失败 {yaml_file.name}: {e}")
-            error_count += 1
+                with open(sing_file, "w", encoding="utf-8") as f:
+                    json.dump(sing_data, f, ensure_ascii=False, indent=2)
 
-    print(f"转换完成：成功 {success_count} 个，失败 {error_count} 个")
+                success_count += 1
+
+            except Exception as e:
+                print(f"转换失败 {yaml_file.name}: {e}")
+
+        print(f"version{version}: 成功 {success_count} 个, 失败 {len(yaml_files) - success_count} 个")
 
 
-def convert_yaml_to_json(yaml_path: Path) -> Dict[str, Any]:
-    with open(yaml_path, "r", encoding="utf-8") as f:
-        yaml_data = yaml.safe_load(f)
-
+def convert_clash_to_sing(yaml_data: Any, version: int) -> dict:
     rules_map: Dict[str, list[Any]] = defaultdict(list)
+    json_data: Dict[str, Any] = {
+        "version": version
+    }
 
     for line in yaml_data.get("payload"):
         if not isinstance(line, str):
@@ -102,11 +94,8 @@ def convert_yaml_to_json(yaml_path: Path) -> Dict[str, Any]:
 
         rules_map[key].append(value)
 
-    json_rules: list[dict[str, list[Any]]] = [{key: values} for key, values in rules_map.items()]
-    json_data: Dict[str, Any] = {
-        "version": RULE_SET_VERSION,
-        "rules": json_rules
-    }
+    rules: list[dict[str, list[Any]]] = [{key: values} for key, values in rules_map.items()]
+    json_data["rules"] = rules
 
     return json_data
 
@@ -121,11 +110,11 @@ def parse_rule_line(line: str) -> tuple[Optional[str], Optional[str]]:
     if len(parts) < 2:
         return None, None
 
-    # 提取前两个部分: 类型和值
-    rule_type = parts[0].strip().strip("'\"")
-    rule_value = parts[1].strip().strip("'\"")
+    # 提取 key and value
+    key = parts[0].strip().strip("'\"")
+    value = parts[1].strip().strip("'\"")
 
-    return rule_type, rule_value
+    return key, value
 
 
 def verify(rule_type: str, value: str) -> bool:
