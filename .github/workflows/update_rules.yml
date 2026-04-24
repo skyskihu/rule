@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      SING_MAX_RULE_SET_VERSION: 5
+      SING_RULE_SET_MAX_VERSION: 5
 
     steps:
       - name: Checkout code

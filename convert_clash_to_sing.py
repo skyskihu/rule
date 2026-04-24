@@ -30,9 +30,9 @@ RULE_TYPE_MAP: Dict[str, str] = {
 
 def main() -> None:
     # args
-    max_version = int(os.environ.get("SING_MAX_RULE_SET_VERSION"))
+    max_version = int(os.environ.get("SING_RULE_SET_MAX_VERSION"))
     if not max_version:
-        print("没有设置环境变量: SING_MAX_RULE_SET_VERSION")
+        print("没有设置环境变量: SING_RULE_SET_MAX_VERSION")
         return
 
     source_path: Path = Path(SOURCE_DIR)
