@@ -43,20 +43,31 @@ jobs:
       - name: Create temporary directories
         run: |
           mkdir -p raw/sing-box
-          mkdir -p raw/clash
           mkdir -p compile/sing-box
-          mkdir -p compile/clash
+          
+          # clash
+          mkdir -p raw/clash/classical
+          mkdir -p raw/clash/domain
+          mkdir -p raw/clash/ipcid
+          mkdir -p compile/clash/domain
+          mkdir -p compile/clash/ipcid
 
-      - name: Convert sing-box format
-        run: python convert_clash_to_sing.py
+      - name: Process source file
+        run: |
+          cp -r source/* raw/clash/classical
+          python convert_clash_to_sing.py
+          python process_clash.py
 
-      - name: Copy yaml to raw
-        run: cp -r source/* raw/clash
-
-      - name: Compile JSON to SRS
+      - name: Compile file
         run: |
           chmod +x ./.github/compile_sing.sh
           ./.github/compile_sing.sh
+          
+          # clash
+          chmod +x ./.github/compile_clash_domain.sh
+          chmod +x ./.github/compile_clash_ip_cidr.sh
+          ./.github/compile_clash_domain.sh
+          ./.github/compile_clash_ip_cidr.sh
 
       - name: Push raw branch
         run: |
