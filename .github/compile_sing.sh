@@ -7,10 +7,10 @@ dst="compile/sing-box"
 
 find "$src" -name "*.json" -type f | while read -r file; do
 
-	target="${file/$src/$dst}"
-	target="${target%.json}.srs"
+	result="${file/$src/$dst}"
+	result="${result%.json}.srs"
 
-	mkdir -p "$(dirname "$target")"
+	mkdir -p "$(dirname "$result")"
 
-	sing-box rule-set compile "$file" --output "$target" || exit 1
+	sing-box rule-set compile "$file" --output "$result" || exit 1
 done

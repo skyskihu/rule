@@ -47,14 +47,24 @@ def main() -> None:
         for yaml_file in yaml_files:
             try:
                 relative_path: Path = yaml_file.relative_to(source_path)
-                sing_file: Path = output_path / f"version{version}" / relative_path.with_suffix(".json")
-                sing_file.parent.mkdir(parents=True, exist_ok=True)
+                output_sing_file: Path = output_path / f"version{version}" / relative_path.with_suffix(".json")
+
 
                 with open(yaml_file, "r", encoding="utf-8") as f:
-                    sing_data = convert_clash_to_sing(yaml.safe_load(f), version)
+                    yaml_data: dict = yaml.safe_load(f)
+                    if not isinstance(yaml_data, dict) or not yaml_data:
+                        continue
 
-                with open(sing_file, "w", encoding="utf-8") as f:
-                    json.dump(sing_data, f, ensure_ascii=False, indent=2)
+                    rule_lines: list[str] = yaml_data.get("payload")
+                    if not isinstance(rule_lines, list) or not yaml_data:
+                        continue
+
+                    json_data = convert_clash_to_sing(rule_lines, version)
+
+                if json_data:
+                    output_sing_file.parent.mkdir(parents=True, exist_ok=True)
+                    with open(output_sing_file, "w", encoding="utf-8") as f:
+                        json.dump(json_data, f, ensure_ascii=False, indent=2)
 
                 success_count += 1
 
@@ -64,18 +74,14 @@ def main() -> None:
         print(f"version{version}: 成功 {success_count} 个, 失败 {len(yaml_files) - success_count} 个")
 
 
-def convert_clash_to_sing(yaml_data: Any, version: int) -> dict:
+def convert_clash_to_sing(rule_lines: list, version: int) -> Optional[dict]:
     rules_map: Dict[str, list[Any]] = defaultdict(list)
-    json_data: Dict[str, Any] = {
-        "version": version
-    }
 
-    for line in yaml_data.get("payload"):
+    for line in rule_lines:
         if not isinstance(line, str):
             continue
 
         rule_type, value = parse_rule_line(line)
-
         if not rule_type or not value:
             continue
 
@@ -95,8 +101,13 @@ def convert_clash_to_sing(yaml_data: Any, version: int) -> dict:
         rules_map[key].append(value)
 
     rules: list[dict[str, list[Any]]] = [{key: values} for key, values in rules_map.items()]
-    json_data["rules"] = rules
+    if not rules:
+        return None
 
+    json_data: Dict[str, Any] = {
+        "version": version,
+        "rules": rules
+    }
     return json_data
 
 
