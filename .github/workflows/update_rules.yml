@@ -4,9 +4,10 @@ on:
   push:
     branches: [ main ]
     paths:
+      - ".github/**"
       - "source/**"
       - "convert_clash_to_sing.py"
-      - ".github/**"
+      - "process_clash.py"
 
   workflow_dispatch:
 
