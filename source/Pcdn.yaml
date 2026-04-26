@@ -1,9 +1,11 @@
 payload:
   # > bilibili
-  - DOMAIN-SUFFIX,szbdyd.com
   - DOMAIN,upos-sz-302ppio.bilivideo.com
   - DOMAIN,upos-sz-302kodo.bilivideo.com
+  - DOMAIN-SUFFIX,v1d.szbdyd.com
   - DOMAIN-SUFFIX,mcdn.bilivideo.cn
+  - DOMAIN-SUFFIX,mcdn.bilivideo.com
+  - DOMAIN-SUFFIX,stun.chat.bilibili.com
 
   # > 斗鱼
   - DOMAIN-SUFFIX,p2cdn.com
@@ -25,6 +27,12 @@ payload:
   - DOMAIN,qn-cdnfile1pcdn.msstatic.com
 
   # > tencent
+  - DOMAIN,gdt.qq.com
+  - DOMAIN,cm.l.qq.com
+  - DOMAIN,vodlive.qq.com
+  - DOMAIN,hcdn.video.qq.com
+  - DOMAIN,pcdn.video.qq.com
+  - DOMAIN,iwan-s.video.qq.com
   - DOMAIN-SUFFIX,p2p.qq.com
   - DOMAIN-SUFFIX,p2ptun.qq.com
   - DOMAIN-SUFFIX,p2pupdate.gamedl.qq.com
