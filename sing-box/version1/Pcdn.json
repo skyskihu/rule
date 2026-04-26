@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "domain": [
+        "upos-sz-302ppio.bilivideo.com",
+        "upos-sz-302kodo.bilivideo.com",
+        "stun.hitv.com",
+        "livewebbs2pcdn.msstatic.com",
+        "qn-cdnfile1pcdn.msstatic.com",
+        "gdt.qq.com",
+        "cm.l.qq.com",
+        "vodlive.qq.com",
+        "hcdn.video.qq.com",
+        "pcdn.video.qq.com",
+        "iwan-s.video.qq.com"
+      ]
+    },
+    {
+      "domain_suffix": [
+        "v1d.szbdyd.com",
+        "mcdn.bilivideo.cn",
+        "mcdn.bilivideo.com",
+        "stun.chat.bilibili.com",
+        "p2cdn.com",
+        "p2plog.douyucdn.cn",
+        "p2perrorlog.douyucdn.cn",
+        "pcdn.yximgs.com",
+        "p2p.huya.com",
+        "p2p.qq.com",
+        "p2ptun.qq.com",
+        "p2pupdate.gamedl.qq.com",
+        "p2pupgrade.gamedl.qq.com",
+        "ppio.cloud",
+        "nexusedgeio.com",
+        "yfp2p.net",
+        "yfcdn.net",
+        "yfcloud.com",
+        "bsccdn.net",
+        "saxysec.com",
+        "xycdn.com",
+        "uhabo.com",
+        "pkoplink.com",
+        "kuiniuca.com",
+        "tianwenca.com",
+        "onethingpcs.com",
+        "mountaintoys.cn",
+        "ietheivaicai.com",
+        "cdnnodedns.cn"
+      ]
+    },
+    {
+      "domain_regex": [
+        "^(p2p-|stun|dyp2p-|p2plive-|p2pchunk-).*\\.douyucdn\\.cn$",
+        "^p2p.*\\.qq\\.com$"
+      ]
+    },
+    {
+      "domain_keyword": [
+        "-p2p.pull.yximgs.com",
+        "-p2p-v2.pull.yximgs.com"
+      ]
+    }
+  ]
+}

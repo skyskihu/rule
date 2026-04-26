@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "bbc.co",
+        "bbc.com",
+        "bbci.co",
+        "bbc.co.uk",
+        "bbci.co.uk",
+        "bidi.net.uk",
+        "bbcfmt.hs.llnwd.net"
+      ]
+    }
+  ]
+}

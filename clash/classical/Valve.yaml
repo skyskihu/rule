@@ -1,0 +1,31 @@
+payload:
+  # > Steam
+  # According to Steam FAQ https://help.steampowered.com/en/faqs/view/2EA8-4D75-DA21-31EB
+  - DOMAIN-SUFFIX,s.team
+  - DOMAIN-SUFFIX,steampowered.com
+  - DOMAIN-SUFFIX,steamcommunity.com
+  - DOMAIN-SUFFIX,steamgames.com
+  - DOMAIN-SUFFIX,steamusercontent.com
+  - DOMAIN-SUFFIX,steamcontent.com
+  - DOMAIN-SUFFIX,steamstatic.com
+
+  # > valve ip
+  # According to AS32590 FAQ https://as32590.net/ipv4.txt
+  # According to AS32590 FAQ https://as32590.net/ipv6.txt
+  - IP-CIDR,45.121.184.0/22
+  - IP-CIDR,103.10.124.0/23
+  - IP-CIDR,103.28.54.0/23
+  - IP-CIDR,146.66.152.0/21
+  - IP-CIDR,155.133.224.0/19
+  - IP-CIDR,162.254.192.0/21
+  - IP-CIDR,185.25.180.0/22
+  - IP-CIDR,192.69.96.0/22
+  - IP-CIDR,205.196.6.0/24
+  - IP-CIDR,208.64.200.0/22
+  - IP-CIDR,208.78.164.0/22
+  - IP-CIDR6,2404:3fc0::/32
+  - IP-CIDR6,2602:801:f000::/40
+  - IP-CIDR6,2a01:bc80::/32
+
+  # > other
+  - DOMAIN,steam-chat.com

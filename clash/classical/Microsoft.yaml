@@ -1,0 +1,86 @@
+payload:
+  # > Microsoft
+  - DOMAIN-SUFFIX,microsoft
+  - DOMAIN-SUFFIX,microsoft.cn
+  - DOMAIN-SUFFIX,microsoft.com
+
+  # > Office
+  - DOMAIN-SUFFIX,office.com
+  - DOMAIN-SUFFIX,office365.com
+  - DOMAIN-SUFFIX,microsoft365.com
+  - DOMAIN-SUFFIX,microsoftonline.com
+
+  # > Email
+  - DOMAIN-SUFFIX,live.com
+  - DOMAIN-SUFFIX,hotmail.com
+  - DOMAIN-SUFFIX,outlook.com
+
+  # > Cloud
+  - DOMAIN-SUFFIX,azure.cn
+  - DOMAIN-SUFFIX,azure.com
+  - DOMAIN-SUFFIX,windows.net
+  - DOMAIN-SUFFIX,cloudapp.net
+  - DOMAIN-SUFFIX,azureedge.net
+  - DOMAIN-SUFFIX,trafficmanager.net
+
+  # > Search
+  - DOMAIN-SUFFIX,msn.com
+  - DOMAIN-SUFFIX,bing.com
+  - DOMAIN-SUFFIX,biying.cn
+
+  # > Productivity
+  - DOMAIN-SUFFIX,teams.com
+  - DOMAIN-SUFFIX,nuget.org
+  - DOMAIN-SUFFIX,vscode.dev
+  - DOMAIN-SUFFIX,onedrive.com
+  - DOMAIN-SUFFIX,sharepoint.com
+  - DOMAIN-SUFFIX,visualstudio.com
+  - DOMAIN-SUFFIX,sysinternals.com
+  - DOMAIN-SUFFIX,powershellgallery.com
+
+  # > Gaming
+  - DOMAIN-SUFFIX,xbox.com
+  - DOMAIN-SUFFIX,mojang.com
+  - DOMAIN-SUFFIX,xboxlive.com
+  - DOMAIN-SUFFIX,minecraft.net
+
+  # > MOI
+  # According to https://support.microsoft.com/en-us/windows/map-of-the-internet-services-f35b4284-09a9-45a1-830b-3c9a953b965d
+  - DOMAIN,fp.msedge.net
+  - DOMAIN,afd.azureedge.net
+  - DOMAIN,afd.azureedge.us
+  - DOMAIN,azwancan.trafficmanager.net
+  - DOMAIN,azwanp.trafficmanager.net
+  - DOMAIN,azwantest2germany.trafficmanager.net
+  - DOMAIN,fp-afd.azurefd.us
+  - DOMAIN,geo.trafficmanager.net
+  - DOMAIN,graph.azurefd.net
+  - DOMAIN,graph.microsoft.com
+  - DOMAIN,gtm-dyn-direct.office365.com
+  - DOMAIN,outlook.office365.com
+  - DOMAIN,roxy.azurefd.net
+  - DOMAIN,static-ecst.licdn.com
+  - DOMAIN-SUFFIX,azchcdnk.com
+  - DOMAIN-SUFFIX,azr.footprintdns.com
+  - DOMAIN-SUFFIX,blob.core.chinacloudapi.cn
+  - DOMAIN-SUFFIX,clo.footprintdns.com
+  - DOMAIN-SUFFIX,cloudapp.azure.com
+  - DOMAIN-SUFFIX,management.azure.com
+  - DOMAIN-SUFFIX,msedge.net
+  - DOMAIN-SUFFIX,officeapps.live.com
+  - DOMAIN-SUFFIX,perf.linkedin.com
+  - DOMAIN-SUFFIX,res.office365.com
+  - DOMAIN-SUFFIX,rp.afd.azureedge-test.net
+  - DOMAIN-SUFFIX,z01.azurefd.net
+  - DOMAIN-SUFFIX,-afd.azurefd.net
+  - DOMAIN-SUFFIX,-canary.azurecloudapp.de
+  - DOMAIN-SUFFIX,-canary.netmon.azure.com
+  - DOMAIN-SUFFIX,-canary.netmon.azure.us
+  - DOMAIN-SUFFIX,-canary.netmon.chinacloudapi.cn
+  - DOMAIN-SUFFIX,-canary-opaph.netmon.azure.com
+  - DOMAIN-SUFFIX,-canary-opaph.netmon.azure.us
+
+  # > other
+  - DOMAIN-SUFFIX,signalr.net
+  - DOMAIN-SUFFIX,windows.com
+  - DOMAIN-SUFFIX,windowsupdate.com

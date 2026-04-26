@@ -1,0 +1,24 @@
+payload:
+  # > Mozilla
+  - DOMAIN-SUFFIX,telemetry.mozilla.org
+
+  # > Grafana Labs
+  - DOMAIN,stats.grafana.org
+
+  # > TelemetryDeck
+  - DOMAIN,nom.telemetrydeck.com
+
+  # > Microsoft
+  - DOMAIN-SUFFIX,in.applicationinsights.azure.com
+
+  # > Adobe
+  - DOMAIN-SUFFIX,geo2.adobe.com
+
+  # > 小米
+  - DOMAIN,stat.youpin.mi.com
+  - DOMAIN-SUFFIX,tracking.miui.com
+  - DOMAIN-SUFFIX,tracking.intl.miui.com
+
+  # > tencent
+  - DOMAIN-SUFFIX,trace.qq.com
+  - DOMAIN-SUFFIX,beacon.qq.com

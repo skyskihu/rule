@@ -1,0 +1,109 @@
+payload:
+  # > Apple CDN
+  - DOMAIN,music.apple.com
+  - DOMAIN,swcdn.apple.com
+  - DOMAIN,appldnld.apple.com
+  - DOMAIN,gs-loc-cn.apple.com
+  - DOMAIN,aod.itunes.apple.com
+  - DOMAIN,mvod.itunes.apple.com
+  - DOMAIN,iosapps.itunes.apple.com
+  - DOMAIN,osxapps.itunes.apple.com
+  - DOMAIN,supportdownload.apple.com
+  - DOMAIN,updates-http.cdn-apple.com
+  - DOMAIN,apptrailers.itunes.apple.com
+
+  # > Google
+  - DOMAIN,dl.google.com
+  - DOMAIN,dl.l.google.com
+  - DOMAIN,update.googleapis.com
+  - DOMAIN,safebrowsing.googleapis.com
+
+  # > Microsoft
+  - DOMAIN-SUFFIX,msftconnecttest.com
+
+  # > PlayStation
+  - DOMAIN-SUFFIX,dl.playstation.net
+
+  # epic
+  - DOMAIN,ol.epicgames.com
+
+  # > Steam
+  - DOMAIN,cm.steampowered.com
+  - DOMAIN-SUFFIX,steamchina.com
+  - DOMAIN-SUFFIX,steamserver.net
+  - DOMAIN-SUFFIX,steamcontent.com
+
+  # 完美世界
+  - DOMAIN,csgo.wmsj.cn
+  - DOMAIN,dota2.wmsj.cn
+  - DOMAIN,wmsjsteam.com
+
+  # 广大通 cdn
+  - DOMAIN,yif.gdtstream.com
+
+  # 金山云 cdn
+  - DOMAIN,dl.steam.ksyna.com
+
+  # 初联 cdn
+  - DOMAIN,dl.steam.clngaa.com
+
+  # 廊坊数云 cdn
+  - DOMAIN,gstore.val.manlaxy.com
+
+  # 玖外璧 cdn
+  - DOMAIN,gstore.val.smogfly.com
+
+  # 白山云 cdn
+  - DOMAIN,st.dl.eccdnx.com
+  - DOMAIN,st.dl.bscstorage.net
+  - DOMAIN,st.dl.pinyuncloud.com
+
+  # 网宿 cdn
+  - DOMAIN,steamstatic.com.8686c.com
+  - DOMAIN,steampowered.com.8686c.com
+
+  # 华为云 cdn
+  - DOMAIN,steampipe.steamcontent.tnkjmec.com
+
+  # akamai cdn
+  - DOMAIN,steamcdn-a.akamaihd.net
+  - DOMAIN,steamstore-a.akamaihd.net
+  - DOMAIN,steambroadcast.akamaized.net
+  - DOMAIN,steamcommunity-a.akamaihd.net
+  - DOMAIN,steamuserimages-a.akamaihd.net
+  - DOMAIN,steamusercontent-a.akamaihd.net
+
+  # ali cloud
+  - DOMAIN,steamcloud-sgp.oss-accelerate.aliyuncs.com
+
+  # > UBI
+  - DOMAIN,uplaypc-s-ubisoft.cdn.ubi.com
+
+  # > Xunlei
+  - DOMAIN-SUFFIX,xunlei.com
+
+  # > UUBooster
+  - PROCESS-NAME,UUBooster
+  - PROCESS-NAME,UUBooster.exe
+
+  # > Download
+  - PROCESS-NAME,fdm.exe
+  - PROCESS-NAME,aria2c.exe
+  - PROCESS-NAME,Thunder.exe
+  - PROCESS-NAME,BitComet.exe
+  - PROCESS-NAME,uTorrent.exe
+  - PROCESS-NAME,WebTorrent.exe
+  - PROCESS-NAME,qbittorrent.exe
+  - PROCESS-NAME,NetTransport.exe
+  - PROCESS-NAME,transmission-qt.exe
+  - PROCESS-NAME,transmission-daemon.exe
+
+  - PROCESS-NAME,fdm
+  - PROCESS-NAME,aria2c
+  - PROCESS-NAME,Thunder
+  - PROCESS-NAME,BitComet
+  - PROCESS-NAME,uTorrent
+  - PROCESS-NAME,WebTorrent
+  - PROCESS-NAME,qbittorrent
+  - PROCESS-NAME,NetTransport
+  - PROCESS-NAME,Transmission
