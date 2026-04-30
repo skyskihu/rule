@@ -53,6 +53,9 @@ payload:
   # 玖外璧 cdn
   - DOMAIN,gstore.val.smogfly.com
 
+  # ali cdn
+  - DOMAIN,xz.pphimalayanrt.com
+
   # 白山云 cdn
   - DOMAIN,st.dl.eccdnx.com
   - DOMAIN,st.dl.bscstorage.net
