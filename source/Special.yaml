@@ -85,6 +85,9 @@ payload:
   # > Xunlei
   - DOMAIN-SUFFIX,xunlei.com
 
+  # > WiFiman
+  - DOMAIN-SUFFIX,app-measurement.com
+
   # > UUBooster
   - PROCESS-NAME,UUBooster
   - PROCESS-NAME,UUBooster.exe
