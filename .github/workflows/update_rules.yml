@@ -8,7 +8,6 @@ on:
       - "source/**"
       - "convert_clash_to_sing.py"
       - "process_clash.py"
-
   workflow_dispatch:
 
 concurrency:
@@ -24,7 +23,6 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       SING_RULE_SET_MAX_VERSION: 5
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
