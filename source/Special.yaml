@@ -17,6 +17,7 @@ payload:
   - DOMAIN,dl.l.google.com
   - DOMAIN,update.googleapis.com
   - DOMAIN,safebrowsing.googleapis.com
+  - DOMAIN-REGEX,^r+[0-9]+(---|\.)sn-(2x3|ni5|j5o)\w{5}\.xn--ngstr-lra8j\.com$
 
   # > Microsoft
   - DOMAIN-SUFFIX,msftconnecttest.com
