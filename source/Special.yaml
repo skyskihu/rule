@@ -90,8 +90,18 @@ payload:
   - DOMAIN-SUFFIX,app-measurement.com
 
   # > UUBooster
-  - PROCESS-NAME,UUBooster
-  - PROCESS-NAME,UUBooster.exe
+  - PROCESS-NAME,uu.exe
+  - PROCESS-NAME,uu_ball.exe
+  - PROCESS-NAME,uu_agent.exe
+  - PROCESS-NAME,uu_render.exe
+  - PROCESS-NAME,uu_cloudsyn.exe
+  - PROCESS-NAME,uu_launcher.exe
+  - PROCESS-NAME,uu_translate.exe
+  - PROCESS-NAME,uu_neth_helper.exe
+  - PROCESS-NAME,uu_neths_helper.exe
+  - PROCESS-NAME,drvinst_arm64.exe
+  - PROCESS-NAME,drvinst_x64.exe
+  - PROCESS-NAME,lspinst_x64.exe
 
   # > Download
   - PROCESS-NAME,fdm.exe
