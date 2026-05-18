@@ -1,0 +1,22 @@
+payload:
+  - PROCESS-NAME,EAAntiCheat.GameServiceLauncher.exe
+  - PROCESS-NAME,EAAntiCheat.GameService.exe
+  - PROCESS-NAME,EAAntiCheat.Installer.exe
+  - PROCESS-NAME,EABackgroundService.exe
+  - PROCESS-NAME,EACefSubProcess.exe
+  - PROCESS-NAME,EALocalHostSvc.exe
+  - PROCESS-NAME,EASteamProxy.exe
+  - PROCESS-NAME,EADesktop.exe
+  - PROCESS-NAME,Link2EA.exe
+  # battlefield
+  - PROCESS-NAME,bf1.exe
+  - PROCESS-NAME,bfv.exe
+  - PROCESS-NAME,BF2042.exe
+  - PROCESS-NAME,bf6.exe
+  - PROCESS-NAME,bflabs.exe
+  # apex
+  - PROCESS-NAME,crashmsg.exe
+  - PROCESS-NAME,r5apex_dx12.exe
+  - PROCESS-NAME,ApexLauncher.exe
+  - PROCESS-NAME,start_protected_game.exe
+  - PROCESS-NAME,EasyAntiCheat_EOS_Setup.exe

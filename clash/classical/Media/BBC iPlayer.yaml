@@ -1,0 +1,9 @@
+payload:
+  # > BBC iPlayer
+  - DOMAIN-SUFFIX,bbc.co
+  - DOMAIN-SUFFIX,bbc.com
+  - DOMAIN-SUFFIX,bbci.co
+  - DOMAIN-SUFFIX,bbc.co.uk
+  - DOMAIN-SUFFIX,bbci.co.uk
+  - DOMAIN-SUFFIX,bidi.net.uk
+  - DOMAIN-SUFFIX,bbcfmt.hs.llnwd.net

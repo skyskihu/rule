@@ -1,0 +1,89 @@
+payload:
+  # > Mozilla
+  - DOMAIN-SUFFIX,telemetry.mozilla.org
+
+  # > Grafana Labs
+  - DOMAIN,stats.grafana.org
+
+  # > TelemetryDeck
+  - DOMAIN,nom.telemetrydeck.com
+
+  # > Adobe
+  - DOMAIN-SUFFIX,geo2.adobe.com
+
+  # > 小米
+  - DOMAIN,stat.youpin.mi.com
+  - DOMAIN-SUFFIX,tracking.miui.com
+  - DOMAIN-SUFFIX,tracking.intl.miui.com
+
+  # > tencent
+  - DOMAIN-SUFFIX,trace.qq.com
+  - DOMAIN-SUFFIX,beacon.qq.com
+
+  # > Microsoft
+  # Vortex / Asimov
+  - DOMAIN,geo.vortex.data.microsoft.com.akadns.net
+  - DOMAIN,db5.vortex.data.microsoft.com.akadns.net
+  - DOMAIN,v10-win.vortex.data.microsoft.com.akadns.net
+  - DOMAIN,eu.vortex.data.microsoft.com
+  - DOMAIN,us.vortex-win.data.microsoft.com
+  - DOMAIN,eu.vortex-win.data.microsoft.com
+  - DOMAIN,v10.vortex-win.data.microsoft.com
+  - DOMAIN,vortex-win-sandbox.data.microsoft.com
+  # Online Crash Analysis
+  - DOMAIN,oca.telemetry.microsoft.com
+  - DOMAIN,alpha.telemetry.microsoft.com
+  # Diagnostic event data
+  - DOMAIN,events.data.microsoft.com
+  - DOMAIN,eu-v10.events.data.microsoft.com
+  - DOMAIN,eu-v20.events.data.microsoft.com
+  - DOMAIN,mobile.events.data.microsoft.com
+  - DOMAIN,browser.events.data.microsoft.com
+  # Telemetry configuration push
+  - DOMAIN,cy2.settings.data.microsoft.com.akadns.net
+  - DOMAIN,asimov-win.settings.data.microsoft.com.akadns.net
+  - DOMAIN,geo.settings-win.data.microsoft.com
+  - DOMAIN,db5.settings-win.data.microsoft.com
+  - DOMAIN,db5-eap.settings-win.data.microsoft.com
+  - DOMAIN,settings-win.data.microsoft.com
+  # Watson Telemetry Crash Analysis Blob
+  - DOMAIN,weus2watcab01.blob.core.windows.net
+  - DOMAIN,weus2watcab02.blob.core.windows.net
+  - DOMAIN,eaus2watcab01.blob.core.windows.net
+  - DOMAIN,eaus2watcab02.blob.core.windows.net
+  - DOMAIN,ceuswatcab02.blob.core.windows.net
+  - DOMAIN,vceuswatcab01.blob.core.windows.net
+  # Application Insights
+  - DOMAIN-SUFFIX,in.applicationinsights.azure.com
+  # statsfe / feedback
+  - DOMAIN,statsfe2.update.microsoft.com.akadns.net
+  - DOMAIN,statsfe1.ws.microsoft.com
+  - DOMAIN,statsfe2.ws.microsoft.com
+  - DOMAIN,statsfe2.update.microsoft.com
+  - DOMAIN,feedback.windows.com
+  - DOMAIN,feedback.microsoft-hohm.com
+  - DOMAIN,feedback.search.microsoft.com
+  # MSN / Bing
+  - DOMAIN,appex-rf.msn.com
+  - DOMAIN,fr-fr.appex-rf.msn.com
+  - DOMAIN,arc.msn.com
+  - DOMAIN,arc.msn.com.nsatc.net
+  - DOMAIN,global.sam.msn.com
+  - DOMAIN,cdn.content.prod.cms.msn.com
+  - DOMAIN,img.stb.s-msn.com
+  - DOMAIN,img-prod-cms-rt-microsoft-com.akamaized.net
+  - DOMAIN,img-s-msn-com.akamaized.net
+  - DOMAIN,finance.services.appex.bing.com
+  - DOMAIN,foodanddrink.tile.appex.bing.com
+  - DOMAIN,blob.weather.microsoft.com
+  # Device metadata
+  - DOMAIN,dmd.metaservices.microsoft.com.akadns.net
+  - DOMAIN,dmd.metaservices.microsoft.com
+  # Windows Insider
+  - DOMAIN,insiderservice.microsoft.com
+  - DOMAIN,insideruser.microsoft.com
+  # other
+  - DOMAIN,next-services.apps.microsoft.com
+  - DOMAIN,edgetipscdn.microsoft.com
+  - DOMAIN,i1.services.social.microsoft.com
+  - DOMAIN,bingforbusiness.com

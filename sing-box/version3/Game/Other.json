@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "process_name": [
+        "Bucky64.exe",
+        "5EClient.exe",
+        "完美世界竞技平台.exe",
+        "MonsterHunterWorld.exe",
+        "Minecraft.exe",
+        "java.exe"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "dazn.com",
+        "dazndn.com",
+        "indazn.com",
+        "dazn-api.com",
+        "indaznlab.com",
+        "dc1voddazn.akamaized.net",
+        "dc2voddazn.akamaized.net",
+        "dcalivedazn.akamaized.net",
+        "dcblivedazn.akamaized.net",
+        "dc1live2lindazn.akamaized.net",
+        "dc1-lm-live2dazn.secure.footprint.net"
+      ]
+    }
+  ]
+}

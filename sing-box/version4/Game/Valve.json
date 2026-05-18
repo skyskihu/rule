@@ -1,0 +1,11 @@
+{
+  "version": 4,
+  "rules": [
+    {
+      "process_name": [
+        "cs2.exe",
+        "deadlock.exe"
+      ]
+    }
+  ]
+}

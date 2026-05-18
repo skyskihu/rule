@@ -1,0 +1,69 @@
+payload:
+  # > bilibili
+  - DOMAIN,upos-sz-302ppio.bilivideo.com
+  - DOMAIN,upos-sz-302kodo.bilivideo.com
+  - DOMAIN-SUFFIX,v1d.szbdyd.com
+  - DOMAIN-SUFFIX,mcdn.bilivideo.cn
+  - DOMAIN-SUFFIX,mcdn.bilivideo.com
+  - DOMAIN-SUFFIX,stun.chat.bilibili.com
+
+  # > 斗鱼
+  - DOMAIN-SUFFIX,p2cdn.com
+  - DOMAIN-SUFFIX,p2plog.douyucdn.cn
+  - DOMAIN-SUFFIX,p2perrorlog.douyucdn.cn
+  - DOMAIN-REGEX,^(p2p-|stun|dyp2p-|p2plive-|p2pchunk-).*\.douyucdn\.cn$
+
+  # 芒果 TV
+  - DOMAIN,stun.hitv.com
+
+  # > 快手
+  - DOMAIN-SUFFIX,pcdn.yximgs.com
+  - DOMAIN-KEYWORD,-p2p.pull.yximgs.com
+  - DOMAIN-KEYWORD,-p2p-v2.pull.yximgs.com
+
+  # > 虎牙
+  - DOMAIN-SUFFIX,p2p.huya.com
+  - DOMAIN,livewebbs2pcdn.msstatic.com
+  - DOMAIN,qn-cdnfile1pcdn.msstatic.com
+
+  # > tencent
+  - DOMAIN,gdt.qq.com
+  - DOMAIN,cm.l.qq.com
+  - DOMAIN,vodlive.qq.com
+  - DOMAIN,hcdn.video.qq.com
+  - DOMAIN,pcdn.video.qq.com
+  - DOMAIN,iwan-s.video.qq.com
+  - DOMAIN-SUFFIX,p2p.qq.com
+  - DOMAIN-SUFFIX,p2ptun.qq.com
+  - DOMAIN-SUFFIX,p2pupdate.gamedl.qq.com
+  - DOMAIN-SUFFIX,p2pupgrade.gamedl.qq.com
+  - DOMAIN-REGEX,^p2p.*\.qq\.com$
+
+  # > PPIO
+  - DOMAIN-SUFFIX,ppio.cloud
+  - DOMAIN-SUFFIX,nexusedgeio.com
+
+  # > YFCloud
+  - DOMAIN-SUFFIX,yfp2p.net
+  - DOMAIN-SUFFIX,yfcdn.net
+  - DOMAIN-SUFFIX,yfcloud.com
+
+  # > 白山云
+  - DOMAIN-SUFFIX,bsccdn.net
+  - DOMAIN-SUFFIX,saxysec.com
+
+  # > 网心云
+  - DOMAIN-SUFFIX,xycdn.com
+  - DOMAIN-SUFFIX,uhabo.com
+  - DOMAIN-SUFFIX,pkoplink.com
+  - DOMAIN-SUFFIX,kuiniuca.com
+  - DOMAIN-SUFFIX,tianwenca.com
+  - DOMAIN-SUFFIX,onethingpcs.com
+  - DOMAIN-SUFFIX,mountaintoys.cn
+
+  # > niulink
+  - DOMAIN-SUFFIX,ietheivaicai.com
+
+  # > other
+  - DOMAIN-SUFFIX,cdnnodedns.cn
+

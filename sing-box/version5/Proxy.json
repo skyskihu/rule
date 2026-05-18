@@ -1,0 +1,38 @@
+{
+  "version": 5,
+  "rules": [
+    {
+      "domain": [
+        "onedrive.live.com",
+        "cdp.cloud.unity3d.com",
+        "api.waqi.info",
+        "aqi.aqicn.org"
+      ]
+    },
+    {
+      "domain_suffix": [
+        "services.googleapis.cn",
+        "battle.net",
+        "battlenet.com",
+        "blizzard.com",
+        "lin.ee",
+        "line.me",
+        "line.naver.jp",
+        "line-apps.com",
+        "line-cdn.net",
+        "line-scdn.net",
+        "nhncorp.jp",
+        "riotcdn.net",
+        "wr.pvp.net",
+        "riotgames.com",
+        "playstation.com",
+        "playstation.net",
+        "playstationnetwork.com",
+        "api.amplitude.com",
+        "gate.hockeyapp.net",
+        "smartmailcloud.com",
+        "app.smartmailcloud.com"
+      ]
+    }
+  ]
+}
