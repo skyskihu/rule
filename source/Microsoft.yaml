@@ -6,6 +6,7 @@ payload:
 
   # > Office
   - DOMAIN-SUFFIX,office.com
+  - DOMAIN-SUFFIX,office.net
   - DOMAIN-SUFFIX,office365.com
   - DOMAIN-SUFFIX,microsoft365.com
   - DOMAIN-SUFFIX,microsoftonline.com
