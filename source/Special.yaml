@@ -66,4 +66,5 @@ payload:
   - DOMAIN-SUFFIX,app-measurement.com
 
   # > jetbrains
-  - DOMAIN-SUFFIX,download-cdn.jetbrains.com
+  - DOMAIN,download.jetbrains.com
+  - DOMAIN,download-cdn.jetbrains.com
