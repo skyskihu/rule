@@ -6,8 +6,7 @@ on:
     paths:
       - ".github/**"
       - "source/**"
-      - "convert_clash_to_sing.py"
-      - "process_clash.py"
+      - "scripts/**"
   workflow_dispatch:
 
 concurrency:
@@ -35,48 +34,23 @@ jobs:
       - name: Install dependencies
         run: |
           pip install pyyaml
-
+          # sing-box
           wget -qO- https://github.com/SagerNet/sing-box/releases/download/v1.14.0-alpha.17/sing-box-1.14.0-alpha.17-linux-amd64.tar.gz | tar -xz
           sudo install -m 0755 sing-box-1.14.0-alpha.17-linux-amd64/sing-box /usr/local/bin/sing-box
-          
+          # mihomo
           wget -qO- https://github.com/MetaCubeX/mihomo/releases/download/v1.19.24/mihomo-linux-amd64-v1-v1.19.24.gz | gunzip -d > mihomo
           sudo install -m 0755 mihomo /usr/local/bin/mihomo
 
-      - name: Create temporary directories
-        run: |
-          mkdir -p raw/sing-box
-          mkdir -p compile/sing-box
-          
-          # clash
-          mkdir -p raw/clash/classical
-          mkdir -p raw/clash/domain
-          mkdir -p raw/clash/ipcid
-          mkdir -p compile/clash/domain
-          mkdir -p compile/clash/ipcid
-
       - name: Process source file
         run: |
-          cp -r source/* raw/clash/classical
-          python convert_clash_to_sing.py
-          python process_clash.py
+          python scripts/process_raw.py
+          python scripts/convert_clash_to_sing.py
 
       - name: Compile file
         run: |
-          chmod +x ./.github/compile_sing.sh
-          ./.github/compile_sing.sh
-          
-          # clash
-          chmod +x ./.github/compile_clash_domain.sh
-          chmod +x ./.github/compile_clash_ip_cidr.sh
-          ./.github/compile_clash_domain.sh
-          ./.github/compile_clash_ip_cidr.sh
+          bash .github/compile_sing.sh
 
-      - name: Push raw branch
+      - name: Push branch
         run: |
-          chmod +x ./.github/push_raw.sh
-          ./.github/push_raw.sh
-
-      - name: Push compile branch
-        run: |
-          chmod +x ./.github/push_compile.sh
-          ./.github/push_compile.sh
+          bash .github/push_raw.sh
+          bash .github/push_compile.sh

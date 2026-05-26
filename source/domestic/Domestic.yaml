@@ -59,7 +59,7 @@ payload:
   - DOMAIN-SUFFIX,huaweicloud.com
   - DOMAIN-SUFFIX,myhuaweicloud.com
 
-  # > China Telecom Cloud
+  # > Domestic Telecom Cloud
   - DOMAIN-SUFFIX,ctyun.cn
   - DOMAIN-SUFFIX,ctycdn.com
 
