@@ -1,0 +1,26 @@
+payload:
+  # > base
+  - DOMAIN-SUFFIX,qq.com
+  - DOMAIN-SUFFIX,wechat.com
+  - DOMAIN-SUFFIX,weixin.com
+  - DOMAIN-SUFFIX,soso.com
+
+  # > Email
+  - DOMAIN-SUFFIX,qqmail.com
+  - DOMAIN-SUFFIX,foxmail.com
+
+  # > Tenpay
+  - DOMAIN-SUFFIX,tenpay.com
+
+  # > Weiyun
+  - DOMAIN-SUFFIX,weiyun.com
+
+  # > Gaming
+  - DOMAIN-SUFFIX,igamecj.com
+
+  # > App
+  - DOMAIN-SUFFIX,myapp.com
+
+  # > Corporate
+  - DOMAIN-SUFFIX,tencent.com
+  - DOMAIN-SUFFIX,tencentmind.com

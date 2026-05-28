@@ -1,4 +1,7 @@
 payload:
+  # > CN
+  - DOMAIN-SUFFIX,cn
+
   # > Apple CDN
   - DOMAIN,music.apple.com
   - DOMAIN,swcdn.apple.com

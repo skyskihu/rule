@@ -1,0 +1,17 @@
+payload:
+  # base
+  - DOMAIN-SUFFIX,126.com
+  - DOMAIN-SUFFIX,126.net
+  - DOMAIN-SUFFIX,127.net
+  - DOMAIN-SUFFIX,163.com
+  - DOMAIN-SUFFIX,netease.com
+
+  # Lofter
+  - DOMAIN-SUFFIX,lofter.com
+
+  # Youdao
+  - DOMAIN-SUFFIX,youdao.com
+
+  # Cloud & CDN
+  - DOMAIN-SUFFIX,163yun.com
+  - DOMAIN-SUFFIX,ydstatic.com

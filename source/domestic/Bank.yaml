@@ -1,0 +1,22 @@
+payload:
+  # > China Bank
+  - DOMAIN-SUFFIX,abchina.com
+
+  # > China Citic Bank
+  - DOMAIN-SUFFIX,ecitic.com
+  - DOMAIN-SUFFIX,ecitic.net
+  - DOMAIN-SUFFIX,citicbank.com
+
+  # > China Construction Bank
+  - DOMAIN-SUFFIX,ccb.com
+
+  # > China Everbright Bank
+  - DOMAIN-SUFFIX,cebbank.com
+
+  # > China Merchants Bank
+  - DOMAIN-SUFFIX,cmbimg.com
+  - DOMAIN-SUFFIX,mbcloud.com
+  - DOMAIN-SUFFIX,cmbchina.com
+
+  # > Ping An Bank
+  - DOMAIN-SUFFIX,pingan.com

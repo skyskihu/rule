@@ -1,0 +1,36 @@
+payload:
+  # > E-Commerce
+  - DOMAIN-SUFFIX,taobao.com
+  - DOMAIN-SUFFIX,taobaocdn.com
+  - DOMAIN-SUFFIX,tbcache.com
+  - DOMAIN-SUFFIX,tbcdn.cn
+  - DOMAIN-SUFFIX,tbcdn.com
+  - DOMAIN-SUFFIX,tmall.com
+  - DOMAIN-SUFFIX,tmall.hk
+  - DOMAIN-SUFFIX,1688.com
+  - DOMAIN-SUFFIX,alibaba.com
+  - DOMAIN-SUFFIX,aliexpress.com
+  - DOMAIN-SUFFIX,ele.me
+
+  # > DingTalk
+  - DOMAIN-SUFFIX,dingtalk.com
+
+  # > Alipay
+  - DOMAIN-SUFFIX,alipay.com
+  - DOMAIN-SUFFIX,alipayobjects.com
+
+  # > map
+  - DOMAIN-SUFFIX,amap.com
+  - DOMAIN-SUFFIX,autonavi.com
+
+  # > App
+  - DOMAIN-SUFFIX,aliapp.org
+  - DOMAIN-SUFFIX,aliimg.com
+  - DOMAIN-SUFFIX,alibabausercontent.com
+  - DOMAIN-SUFFIX,mmstat.com
+  - DOMAIN-SUFFIX,ucweb.com
+
+  # > other
+  - DOMAIN-SUFFIX,alisoft.com
+  - DOMAIN-SUFFIX,alibabachengdun.com
+  - DOMAIN-SUFFIX,elemecdn.com
