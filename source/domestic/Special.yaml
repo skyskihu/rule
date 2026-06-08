@@ -58,6 +58,7 @@ payload:
   - DOMAIN,steamuserimages-a.akamaihd.net
   - DOMAIN,steamusercontent-a.akamaihd.net
   - DOMAIN,steamcloud-sgp.oss-accelerate.aliyuncs.com
+  - DOMAIN,files.steam.nsclouds.cn
 
   # > UBI
   - DOMAIN,uplaypc-s-ubisoft.cdn.ubi.com
