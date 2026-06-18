@@ -48,9 +48,11 @@ jobs:
 
       - name: Compile file
         run: |
-          bash .github/compile_sing.sh
+          bash scripts/compile_clash_domain.sh
+          bash scripts/compile_clash_ip_cidr.sh
+          bash scripts/compile_sing.sh
 
       - name: Push branch
         run: |
-          bash .github/push_raw.sh
-          bash .github/push_compile.sh
+          bash scripts/push_raw.sh
+          bash scripts/push_compile.sh

@@ -6,6 +6,7 @@ import yaml
 BASE_DIR = Path(__file__).resolve().parent.parent
 SOURCE_DIR = BASE_DIR / "source"
 CLASH_CLASSICAL_DIR = BASE_DIR / "raw/clash"
+EXCLUDE_DIR = ["other", "ip"]
 
 
 def main():
@@ -24,7 +25,7 @@ def process_dir(src: Path):
     flag = True
     iterators = src.iterdir()
     for iterator in iterators:
-        if iterator.is_dir() and iterator.name.lower() != "other":
+        if iterator.is_dir() and iterator.name.lower() not in EXCLUDE_DIR:
             flag = False
             process_dir(iterator)
     if flag:
