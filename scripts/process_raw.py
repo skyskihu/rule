@@ -22,14 +22,11 @@ def process_dir(src: Path):
     if src.is_file():
         return
 
-    flag = True
     iterators = src.iterdir()
     for iterator in iterators:
         if iterator.is_dir() and iterator.name.lower() not in EXCLUDE_DIR:
-            flag = False
             process_dir(iterator)
-    if flag:
-        merge_rules(src)
+    merge_rules(src)
 
 
 def merge_rules(src: Path):
@@ -40,6 +37,8 @@ def merge_rules(src: Path):
         yaml_data = yaml.safe_load(file.read_text()).get("payload")
         if isinstance(yaml_data, list) and yaml_data:
             rule_line.extend(yaml_data)
+    if not rule_line:
+        return
     with open(output_file, "w") as f:
         yaml.dump({"payload": rule_line}, f)
 

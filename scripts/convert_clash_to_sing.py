@@ -45,14 +45,7 @@ def main() -> None:
                 relative_path: Path = yaml_file.relative_to(SOURCE_DIR)
                 output_sing_file: Path = OUTPUT_DIR / f"version{version}" / relative_path.with_suffix(".json")
                 with open(yaml_file, "r", encoding="utf-8") as f:
-                    yaml_data = yaml.safe_load(f)
-                    if not isinstance(yaml_data, dict) or not yaml_data:
-                        continue
-
-                    rule_lines = yaml_data.get("payload")
-                    if not isinstance(rule_lines, list) or not yaml_data:
-                        continue
-
+                    rule_lines = yaml.safe_load(f).get("payload")
                     json_data = convert_clash_to_sing(rule_lines, version)
                 if json_data:
                     output_sing_file.parent.mkdir(parents=True, exist_ok=True)
