@@ -44,6 +44,7 @@ jobs:
       - name: Process source file
         run: |
           python scripts/process_raw.py
+          python scripts/process_clash.py
           python scripts/convert_clash_to_sing.py
 
       - name: Compile file

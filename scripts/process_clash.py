@@ -3,9 +3,10 @@ from typing import Optional
 
 import yaml
 
-SOURCE_DIR = "raw/clash"
-IP_CIDR_OUTPUT_DIR = "temp/clash/ipcidr"
+DOMAIN_SOURCE_DIR = "raw/clash/domain"
 DOMAIN_OUTPUT_DIR = "temp/clash/domain"
+IP_CIDR_SOURCE_DIR = "raw/clash/ip"
+IP_CIDR_OUTPUT_DIR = "temp/clash/ip"
 
 IP_CIDR_KEY = ["IP-CIDR", "IP-CIDR6"]
 DOMAIN_MAP = {
@@ -15,43 +16,31 @@ DOMAIN_MAP = {
 
 
 def main():
-    source_path: Path = Path(SOURCE_DIR)
+    domain_path: Path = Path(DOMAIN_SOURCE_DIR)
+    ip_cidr_path: Path = Path(IP_CIDR_SOURCE_DIR)
     domain_output_path: Path = Path(DOMAIN_OUTPUT_DIR)
     ip_cidr_output_path: Path = Path(IP_CIDR_OUTPUT_DIR)
 
-    yaml_files: list[Path] = list(source_path.rglob("*.yaml"))
-    print(f"找到 {len(yaml_files)} 个 YAML 文件")
+    process_dir(domain_path, domain_output_path, process_domain)
+    process_dir(ip_cidr_path, ip_cidr_output_path, process_ip_cidr)
 
-    for yaml_file in yaml_files:
+
+def process_dir(source_path: Path, output_path: Path, fun):
+    files = list(source_path.rglob("*.yaml"))
+    print(f"找到 {len(files)} 个 domain 文件")
+    for file in files:
         try:
-            relative_path: Path = yaml_file.relative_to(source_path)
-            domain_path: Path = domain_output_path / relative_path.with_suffix(".yaml")
-            ip_cidr_path: Path = ip_cidr_output_path / relative_path.with_suffix(".yaml")
+            relative_path: Path = file.relative_to(source_path)
+            result_path: Path = output_path / relative_path.with_suffix(".yaml")
 
-            with open(yaml_file, "r", encoding="utf-8") as f:
-                yaml_data: dict = yaml.safe_load(f)
-                if not isinstance(yaml_data, dict) or not yaml_data:
-                    continue
-
-                rule_lines = yaml_data.get("payload")
-                if not isinstance(rule_lines, list) or not yaml_data:
-                    continue
-
-                domain_data = process_domain(rule_lines)
-                ip_cidr_data = process_ip_cidr(rule_lines)
-
-            if domain_data:
-                domain_path.parent.mkdir(parents=True, exist_ok=True)
-                with open(domain_path, "w", encoding="utf-8") as f:
-                    yaml.dump(domain_data, f)
-
-            if ip_cidr_data:
-                ip_cidr_path.parent.mkdir(parents=True, exist_ok=True)
-                with open(ip_cidr_path, "w", encoding="utf-8") as f:
-                    yaml.dump(ip_cidr_data, f)
-
+            with open(file, "r", encoding="utf-8") as f:
+                rule_lines = yaml.safe_load(f).get("payload")
+            data = fun(rule_lines)
+            result_path.parent.mkdir(parents=True, exist_ok=True)
+            with open(result_path, "w", encoding="utf-8") as f:
+                yaml.dump(data, f)
         except Exception as e:
-            print(f"转换失败 {yaml_file.name}: {e}")
+            print(f"转换失败 {file.name}: {e}")
 
 
 def process_domain(rule_lines: list) -> Optional[dict]:
@@ -101,19 +90,13 @@ def process_ip_cidr(rule_lines: list) -> Optional[dict]:
 
 
 def parse_rule_line(line: str) -> tuple[Optional[str], Optional[str]]:
-    # 移除行内注释
     if "#" in line:
         line = line.split("#", 1)[0]
-
-    # 按逗号分割字符串
     parts = line.split(",")
     if len(parts) < 2:
         return None, None
-
-    # 提取 key and value
     key = parts[0].strip().strip("'\"")
     value = parts[1].strip().strip("'\"")
-
     return key, value
 
 
