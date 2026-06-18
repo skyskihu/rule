@@ -2,7 +2,7 @@
 
 set -e -o pipefail
 
-src="raw/clash/domain"
+src="temp/clash/domain"
 dst="compile/clash/domain"
 
 find "$src" -name "*.yaml" -type f | while read -r file; do
