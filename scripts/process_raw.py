@@ -24,7 +24,7 @@ def process_dir(src: Path):
     flag = True
     iterators = src.iterdir()
     for iterator in iterators:
-        if iterator.is_dir():
+        if iterator.is_dir() and iterator.name.lower() != "other":
             flag = False
             process_dir(iterator)
     if flag:
