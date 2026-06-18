@@ -1,0 +1,11 @@
+payload:
+  # > Steam
+  # According to Steam FAQ https://help.steampowered.com/en/faqs/view/2EA8-4D75-DA21-31EB
+  - DOMAIN-SUFFIX,s.team
+  - DOMAIN-SUFFIX,steampowered.com
+  - DOMAIN-SUFFIX,steamcommunity.com
+  - DOMAIN-SUFFIX,steamgames.com
+  - DOMAIN-SUFFIX,steamusercontent.com
+  - DOMAIN-SUFFIX,steamcontent.com
+  - DOMAIN-SUFFIX,steamstatic.com
+  - DOMAIN,steam-chat.com
