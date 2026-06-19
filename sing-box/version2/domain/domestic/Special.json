@@ -1,0 +1,64 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "domain_suffix": [
+        "cn",
+        "msftconnecttest.com",
+        "dl.playstation.net",
+        "steamchina.com",
+        "steamserver.net",
+        "steamcontent.com",
+        "xunlei.com",
+        "app-measurement.com"
+      ]
+    },
+    {
+      "domain": [
+        "music.apple.com",
+        "swcdn.apple.com",
+        "appldnld.apple.com",
+        "gs-loc-cn.apple.com",
+        "aod.itunes.apple.com",
+        "mvod.itunes.apple.com",
+        "iosapps.itunes.apple.com",
+        "osxapps.itunes.apple.com",
+        "supportdownload.apple.com",
+        "updates-http.cdn-apple.com",
+        "apptrailers.itunes.apple.com",
+        "dl.google.com",
+        "dl.l.google.com",
+        "update.googleapis.com",
+        "safebrowsing.googleapis.com",
+        "ol.epicgames.com",
+        "cm.steampowered.com",
+        "csgo.wmsj.cn",
+        "dota2.wmsj.cn",
+        "wmsjsteam.com",
+        "yif.gdtstream.com",
+        "dl.steam.ksyna.com",
+        "dl.steam.clngaa.com",
+        "gstore.val.manlaxy.com",
+        "gstore.val.smogfly.com",
+        "xz.pphimalayanrt.com",
+        "st.dl.eccdnx.com",
+        "st.dl.bscstorage.net",
+        "st.dl.pinyuncloud.com",
+        "steamstatic.com.8686c.com",
+        "steampowered.com.8686c.com",
+        "steampipe.steamcontent.tnkjmec.com",
+        "steamcdn-a.akamaihd.net",
+        "steamstore-a.akamaihd.net",
+        "steambroadcast.akamaized.net",
+        "steamcommunity-a.akamaihd.net",
+        "steamuserimages-a.akamaihd.net",
+        "steamusercontent-a.akamaihd.net",
+        "steamcloud-sgp.oss-accelerate.aliyuncs.com",
+        "files.steam.nsclouds.cn",
+        "uplaypc-s-ubisoft.cdn.ubi.com",
+        "download.jetbrains.com",
+        "download-cdn.jetbrains.com"
+      ]
+    }
+  ]
+}

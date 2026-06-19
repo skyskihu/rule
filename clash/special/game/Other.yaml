@@ -1,0 +1,9 @@
+payload:
+  # cs battle platform
+  - PROCESS-NAME,Bucky64.exe
+  - PROCESS-NAME,5EClient.exe
+  - PROCESS-NAME,完美世界竞技平台.exe
+  # MonsterHunterWorld
+  - PROCESS-NAME,MonsterHunterWorld.exe
+  # Minecraft
+  - PROCESS-NAME,Minecraft.exe

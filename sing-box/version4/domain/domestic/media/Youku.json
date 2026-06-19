@@ -1,0 +1,12 @@
+{
+  "version": 4,
+  "rules": [
+    {
+      "domain_suffix": [
+        "soku.com",
+        "youku.com",
+        "ykimg.com"
+      ]
+    }
+  ]
+}

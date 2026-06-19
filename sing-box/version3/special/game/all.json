@@ -1,0 +1,35 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "process_name": [
+        "Bucky64.exe",
+        "5EClient.exe",
+        "完美世界竞技平台.exe",
+        "MonsterHunterWorld.exe",
+        "Minecraft.exe",
+        "EAAntiCheat.GameServiceLauncher.exe",
+        "EAAntiCheat.GameService.exe",
+        "EAAntiCheat.Installer.exe",
+        "EABackgroundService.exe",
+        "EACefSubProcess.exe",
+        "EALocalHostSvc.exe",
+        "EASteamProxy.exe",
+        "EADesktop.exe",
+        "Link2EA.exe",
+        "bf1.exe",
+        "bfv.exe",
+        "BF2042.exe",
+        "bf6.exe",
+        "bflabs.exe",
+        "crashmsg.exe",
+        "r5apex_dx12.exe",
+        "ApexLauncher.exe",
+        "start_protected_game.exe",
+        "EasyAntiCheat_EOS_Setup.exe",
+        "cs2.exe",
+        "deadlock.exe"
+      ]
+    }
+  ]
+}

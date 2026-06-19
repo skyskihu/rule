@@ -1,0 +1,27 @@
+payload:
+- PROCESS-NAME,Bucky64.exe
+- PROCESS-NAME,5EClient.exe
+- "PROCESS-NAME,\u5B8C\u7F8E\u4E16\u754C\u7ADE\u6280\u5E73\u53F0.exe"
+- PROCESS-NAME,MonsterHunterWorld.exe
+- PROCESS-NAME,Minecraft.exe
+- PROCESS-NAME,EAAntiCheat.GameServiceLauncher.exe
+- PROCESS-NAME,EAAntiCheat.GameService.exe
+- PROCESS-NAME,EAAntiCheat.Installer.exe
+- PROCESS-NAME,EABackgroundService.exe
+- PROCESS-NAME,EACefSubProcess.exe
+- PROCESS-NAME,EALocalHostSvc.exe
+- PROCESS-NAME,EASteamProxy.exe
+- PROCESS-NAME,EADesktop.exe
+- PROCESS-NAME,Link2EA.exe
+- PROCESS-NAME,bf1.exe
+- PROCESS-NAME,bfv.exe
+- PROCESS-NAME,BF2042.exe
+- PROCESS-NAME,bf6.exe
+- PROCESS-NAME,bflabs.exe
+- PROCESS-NAME,crashmsg.exe
+- PROCESS-NAME,r5apex_dx12.exe
+- PROCESS-NAME,ApexLauncher.exe
+- PROCESS-NAME,start_protected_game.exe
+- PROCESS-NAME,EasyAntiCheat_EOS_Setup.exe
+- PROCESS-NAME,cs2.exe
+- PROCESS-NAME,deadlock.exe

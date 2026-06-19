@@ -1,0 +1,43 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "71.am",
+        "qy.com",
+        "qy.net",
+        "pps.tv",
+        "iq.com",
+        "gitv.cn",
+        "gitv.tv",
+        "qiyi.cn",
+        "qiyi.com",
+        "suike.cn",
+        "aianno.cn",
+        "iqiyi.com",
+        "71.am.com",
+        "71edge.net",
+        "aianno.com",
+        "71edge.com",
+        "ppsimg.com",
+        "ppsurl.com",
+        "baiying.com",
+        "qiyipic.com",
+        "ppstream.cn",
+        "ppstream.com",
+        "ppstream.net",
+        "iqiyipic.com",
+        "jiangbing.cn",
+        "ibkstore.com",
+        "iqiyiedge.com",
+        "iqiyiedge.net",
+        "iqiyi.demo.uwp",
+        "ppstream.com.cn",
+        "ppstream.net.cn",
+        "aiqiyicloud.com",
+        "aiqiyicloud.net",
+        "aiqiyicloud-mgmt.com"
+      ]
+    }
+  ]
+}

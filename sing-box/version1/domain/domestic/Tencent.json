@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "domain_suffix": [
+        "qq.com",
+        "wechat.com",
+        "weixin.com",
+        "soso.com",
+        "qqmail.com",
+        "foxmail.com",
+        "tenpay.com",
+        "weiyun.com",
+        "igamecj.com",
+        "myapp.com",
+        "tencent.com",
+        "tencentmind.com"
+      ]
+    }
+  ]
+}
