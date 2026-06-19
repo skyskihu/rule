@@ -8,9 +8,8 @@ from typing import Dict, Any, Optional
 
 import yaml
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-SOURCE_DIR = BASE_DIR / "raw/clash"
-OUTPUT_DIR = BASE_DIR / "raw/sing-box"
+SOURCE_DIR = Path("raw/clash")
+OUTPUT_DIR = Path("raw/sing-box")
 RULE_TYPE_MAP: Dict[str, str] = {
     "DOMAIN": "domain",
     "DOMAIN-SUFFIX": "domain_suffix",
@@ -30,11 +29,12 @@ RULE_TYPE_MAP: Dict[str, str] = {
 
 def main() -> None:
     # args
-    max_version = int(os.environ.get("SING_RULE_SET_MAX_VERSION"))
-    if not max_version:
+    sing_rule_set_max_version = os.environ.get("SING_RULE_SET_MAX_VERSION")
+    if not sing_rule_set_max_version:
         print("没有环境变量: SING_RULE_SET_MAX_VERSION")
         return
 
+    max_version = int(sing_rule_set_max_version)
     yaml_files: list[Path] = list(SOURCE_DIR.rglob("*.yaml"))
     print(f"找到 {len(yaml_files)} 个 YAML 文件")
 

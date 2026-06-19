@@ -3,19 +3,14 @@ from pathlib import Path
 
 import yaml
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-SOURCE_DIR = BASE_DIR / "source"
-CLASH_CLASSICAL_DIR = BASE_DIR / "raw/clash"
+SOURCE_DIR = Path("source/")
+OUTPUT_DIR = Path("raw/clash")
 EXCLUDE_DIR = ["other", "ip"]
 
 
 def main():
-    copy_files(SOURCE_DIR, CLASH_CLASSICAL_DIR)
-    process_dir(CLASH_CLASSICAL_DIR)
-
-
-def copy_files(src: Path, dst: Path):
-    shutil.copytree(src, dst, dirs_exist_ok=True)
+    shutil.copytree(SOURCE_DIR, OUTPUT_DIR, dirs_exist_ok=True)
+    process_dir(OUTPUT_DIR)
 
 
 def process_dir(src: Path):

@@ -3,31 +3,27 @@ from typing import Optional
 
 import yaml
 
-DOMAIN_SOURCE_DIR = "raw/clash/domain"
-DOMAIN_OUTPUT_DIR = "temp/clash/domain"
-IP_CIDR_SOURCE_DIR = "raw/clash/ip"
-IP_CIDR_OUTPUT_DIR = "temp/clash/ip"
-
-IP_CIDR_KEY = ["IP-CIDR", "IP-CIDR6"]
+DOMAIN_SOURCE_DIR = Path("raw/clash/domain")
+DOMAIN_OUTPUT_DIR = Path("temp/clash/domain")
+IP_CIDR_SOURCE_DIR = Path("raw/clash/ip")
+IP_CIDR_OUTPUT_DIR = Path("temp/clash/ip")
 DOMAIN_MAP = {
     "DOMAIN": "",
     "DOMAIN-SUFFIX": "+."
 }
+IP_CIDR_MAP = {
+    "IP-CIDR": "",
+    "IP-CIDR6": ""
+}
 
 
 def main():
-    domain_path: Path = Path(DOMAIN_SOURCE_DIR)
-    ip_cidr_path: Path = Path(IP_CIDR_SOURCE_DIR)
-    domain_output_path: Path = Path(DOMAIN_OUTPUT_DIR)
-    ip_cidr_output_path: Path = Path(IP_CIDR_OUTPUT_DIR)
-
-    process_dir(domain_path, domain_output_path, process_domain)
-    process_dir(ip_cidr_path, ip_cidr_output_path, process_ip_cidr)
+    process_dir(DOMAIN_SOURCE_DIR, DOMAIN_OUTPUT_DIR, lambda line: convert_classical(line, DOMAIN_MAP))
+    process_dir(IP_CIDR_SOURCE_DIR, IP_CIDR_OUTPUT_DIR, lambda line: convert_classical(line, IP_CIDR_MAP))
 
 
 def process_dir(source_path: Path, output_path: Path, fun):
     files = list(source_path.rglob("*.yaml"))
-    print(f"找到 {len(files)} 个 domain 文件")
     for file in files:
         try:
             relative_path: Path = file.relative_to(source_path)
@@ -43,7 +39,7 @@ def process_dir(source_path: Path, output_path: Path, fun):
             print(f"转换失败 {file.name}: {e}")
 
 
-def process_domain(rule_lines: list) -> Optional[dict]:
+def convert_classical(rule_lines: list, classical_map: dict) -> Optional[dict]:
     result: dict = {
         "payload": []
     }
@@ -56,33 +52,10 @@ def process_domain(rule_lines: list) -> Optional[dict]:
         if not rule_type or not value:
             continue
 
-        if rule_type not in DOMAIN_MAP.keys():
+        if rule_type not in classical_map.keys():
             continue
 
-        result["payload"].append(f"{DOMAIN_MAP[rule_type]}{value}")
-
-    if not result.get("payload"):
-        return None
-    return result
-
-
-def process_ip_cidr(rule_lines: list) -> Optional[dict]:
-    result: dict = {
-        "payload": []
-    }
-
-    for line in rule_lines:
-        if not isinstance(line, str):
-            continue
-
-        rule_type, value = parse_rule_line(line)
-        if not rule_type or not value:
-            continue
-
-        if rule_type not in IP_CIDR_KEY:
-            continue
-
-        result["payload"].append(value)
+        result["payload"].append(f"{classical_map[rule_type]}{value}")
 
     if not result.get("payload"):
         return None
