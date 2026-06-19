@@ -1,12 +1,15 @@
+import shutil
 from pathlib import Path
 from typing import Optional
 
 import yaml
 
-DOMAIN_SOURCE_DIR = Path("raw/clash/domain")
-DOMAIN_OUTPUT_DIR = Path("temp/clash/domain")
-IP_CIDR_SOURCE_DIR = Path("raw/clash/ip")
-IP_CIDR_OUTPUT_DIR = Path("temp/clash/ip")
+DOMAIN_SOURCE_DIR = Path("temp/clash/domain")
+DOMAIN_OUTPUT_DIR = Path("raw/clash/domain")
+IP_CIDR_SOURCE_DIR = Path("temp/clash/ip")
+IP_CIDR_OUTPUT_DIR = Path("raw/clash/ip")
+SPECIAL_SOURCE_DIR = Path("temp/clash/special")
+SPECIAL_OUTPUT_DIR = Path("raw/clash/special")
 DOMAIN_MAP = {
     "DOMAIN": "",
     "DOMAIN-SUFFIX": "+."
@@ -18,6 +21,7 @@ IP_CIDR_MAP = {
 
 
 def main():
+    shutil.copytree(SPECIAL_SOURCE_DIR, SPECIAL_OUTPUT_DIR)
     process_dir(DOMAIN_SOURCE_DIR, DOMAIN_OUTPUT_DIR, lambda line: convert_classical(line, DOMAIN_MAP))
     process_dir(IP_CIDR_SOURCE_DIR, IP_CIDR_OUTPUT_DIR, lambda line: convert_classical(line, IP_CIDR_MAP))
 

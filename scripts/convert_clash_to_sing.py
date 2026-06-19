@@ -8,7 +8,7 @@ from typing import Dict, Any, Optional
 
 import yaml
 
-SOURCE_DIR = Path("raw/clash")
+SOURCE_DIR = Path("temp/clash")
 OUTPUT_DIR = Path("raw/sing-box")
 RULE_TYPE_MAP: Dict[str, str] = {
     "DOMAIN": "domain",

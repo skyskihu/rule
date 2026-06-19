@@ -4,7 +4,7 @@ from pathlib import Path
 import yaml
 
 SOURCE_DIR = Path("source/")
-OUTPUT_DIR = Path("raw/clash")
+OUTPUT_DIR = Path("temp/clash")
 EXCLUDE_DIR = ["other", "ip"]
 
 
