@@ -7,4 +7,3 @@ payload:
   - PROCESS-NAME,MonsterHunterWorld.exe
   # Minecraft
   - PROCESS-NAME,Minecraft.exe
-  - PROCESS-NAME,java.exe
