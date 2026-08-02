@@ -8,12 +8,9 @@ payload:
   - DOMAIN-SUFFIX,googleapis.com
   - DOMAIN-SUFFIX,googleapis.cn
 
-  # > Blizzard
-  - DOMAIN,cdp.cloud.unity3d.com
-  - DOMAIN-SUFFIX,battle.net
-  - DOMAIN-SUFFIX,battlenet.com
-  - DOMAIN-SUFFIX,blizzard.com
-  
+  # > bitwarden
+  - DOMAIN-SUFFIX,bitwarden.com
+
   # > Line
   - DOMAIN-SUFFIX,lin.ee
   - DOMAIN-SUFFIX,line.me
@@ -22,6 +19,12 @@ payload:
   - DOMAIN-SUFFIX,line-cdn.net
   - DOMAIN-SUFFIX,line-scdn.net
   - DOMAIN-SUFFIX,nhncorp.jp
+
+  # > Blizzard
+  - DOMAIN,cdp.cloud.unity3d.com
+  - DOMAIN-SUFFIX,battle.net
+  - DOMAIN-SUFFIX,battlenet.com
+  - DOMAIN-SUFFIX,blizzard.com
 
   # > Riot Games
   - DOMAIN-SUFFIX,riotcdn.net
