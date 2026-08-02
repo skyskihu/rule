@@ -15,12 +15,6 @@ payload:
   - DOMAIN,updates-http.cdn-apple.com
   - DOMAIN,apptrailers.itunes.apple.com
 
-  # > Google
-  - DOMAIN,dl.google.com
-  - DOMAIN,dl.l.google.com
-  - DOMAIN,update.googleapis.com
-  - DOMAIN,safebrowsing.googleapis.com
-
   # > Microsoft
   - DOMAIN-SUFFIX,msftconnecttest.com
 

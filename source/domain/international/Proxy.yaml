@@ -3,7 +3,10 @@ payload:
   - DOMAIN,onedrive.live.com
 
   # > Google
-  - DOMAIN-SUFFIX,services.googleapis.cn
+  - DOMAIN-SUFFIX,google.com
+  - DOMAIN-SUFFIX,google.cn
+  - DOMAIN-SUFFIX,googleapis.com
+  - DOMAIN-SUFFIX,googleapis.cn
 
   # > Blizzard
   - DOMAIN,cdp.cloud.unity3d.com
