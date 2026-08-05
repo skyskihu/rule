@@ -1,0 +1,37 @@
+payload:
+  - DOMAIN-SUFFIX,goog
+  - DOMAIN-SUFFIX,google
+  - DOMAIN-SUFFIX,google.com
+
+  # > API
+  - DOMAIN-SUFFIX,gstatic.com
+  - DOMAIN-SUFFIX,googleapis.com
+  - DOMAIN-SUFFIX,googleapps.com
+  - DOMAIN-SUFFIX,googleusercontent.com
+
+  # > GVT
+  - DOMAIN-SUFFIX,gvt1.com
+  - DOMAIN-SUFFIX,gvt2.com
+
+  # > Flights
+  - DOMAIN-SUFFIX,googleflights.net
+  - DOMAIN-SUFFIX,googletraveladservices.com
+
+  # > reCAPTCHA
+  - DOMAIN-SUFFIX,recaptcha.net
+
+  # china
+  # > API
+  - DOMAIN-SUFFIX,gstatic.cn
+  - DOMAIN-SUFFIX,gstatic-cn.com
+  - DOMAIN-SUFFIX,googleapis.cn
+  - DOMAIN-SUFFIX,googleapis-cn.com
+  - DOMAIN-SUFFIX,googleapps-cn.com
+  # > GVT
+  - DOMAIN-SUFFIX,gvt1-cn.com
+  - DOMAIN-SUFFIX,gvt2-cn.com
+  # > Flights
+  - DOMAIN-SUFFIX,googleflights-cn.net
+  - DOMAIN-SUFFIX,googletraveladservices-cn.com
+  # > reCAPTCHA
+  - DOMAIN-SUFFIX,recaptcha-cn.net

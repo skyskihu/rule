@@ -2,12 +2,6 @@ payload:
   # > onedrive
   - DOMAIN,onedrive.live.com
 
-  # > Google
-  - DOMAIN-SUFFIX,google.com
-  - DOMAIN-SUFFIX,google.cn
-  - DOMAIN-SUFFIX,googleapis.com
-  - DOMAIN-SUFFIX,googleapis.cn
-
   # > bitwarden
   - DOMAIN-SUFFIX,bitwarden.com
 
