@@ -4,6 +4,7 @@ payload:
   - DOMAIN-SUFFIX,google.com
 
   # > API
+  - DOMAIN-SUFFIX,ggpht.com
   - DOMAIN-SUFFIX,gstatic.com
   - DOMAIN-SUFFIX,googleapis.com
   - DOMAIN-SUFFIX,googleapps.com
@@ -19,6 +20,9 @@ payload:
 
   # > reCAPTCHA
   - DOMAIN-SUFFIX,recaptcha.net
+
+  # > other
+  - DOMAIN,ohttp-relay-safebrowsing-chrome.google.fastly-edge.com
 
   # china
   # > API

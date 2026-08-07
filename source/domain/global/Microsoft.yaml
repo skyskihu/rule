@@ -73,13 +73,6 @@ payload:
   - DOMAIN-SUFFIX,res.office365.com
   - DOMAIN-SUFFIX,rp.afd.azureedge-test.net
   - DOMAIN-SUFFIX,z01.azurefd.net
-  - DOMAIN-SUFFIX,-afd.azurefd.net
-  - DOMAIN-SUFFIX,-canary.azurecloudapp.de
-  - DOMAIN-SUFFIX,-canary.netmon.azure.com
-  - DOMAIN-SUFFIX,-canary.netmon.azure.us
-  - DOMAIN-SUFFIX,-canary.netmon.chinacloudapi.cn
-  - DOMAIN-SUFFIX,-canary-opaph.netmon.azure.com
-  - DOMAIN-SUFFIX,-canary-opaph.netmon.azure.us
 
   # > other
   - DOMAIN-SUFFIX,signalr.net

@@ -25,13 +25,15 @@ payload:
   - DOMAIN,ol.epicgames.com
 
   # > Steam
-  - DOMAIN,cm.steampowered.com
-  - DOMAIN-SUFFIX,steamchina.com
   - DOMAIN-SUFFIX,steamserver.net
-  - DOMAIN-SUFFIX,steamcontent.com
+
+  # perfect world
   - DOMAIN,csgo.wmsj.cn
   - DOMAIN,dota2.wmsj.cn
   - DOMAIN,wmsjsteam.com
+  - DOMAIN-SUFFIX,steamchina.com
+
+  # CDN
   - DOMAIN,yif.gdtstream.com
   - DOMAIN,dl.steam.ksyna.com
   - DOMAIN,dl.steam.clngaa.com
