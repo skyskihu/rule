@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "domain_suffix": [
+        "steampowered.com",
+        "steamcommunity.com",
+        "steamgames.com",
+        "steamusercontent.com",
+        "steamcontent.com",
+        "steamstatic.com",
+        "s.team"
+      ]
+    },
+    {
+      "domain": [
+        "steam-chat.com",
+        "steamconnecttest.com"
+      ]
+    }
+  ]
+}

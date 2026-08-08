@@ -1,0 +1,28 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "process_name": [
+        "EAAntiCheat.GameServiceLauncher.exe",
+        "EAAntiCheat.GameService.exe",
+        "EAAntiCheat.Installer.exe",
+        "EABackgroundService.exe",
+        "EACefSubProcess.exe",
+        "EALocalHostSvc.exe",
+        "EASteamProxy.exe",
+        "EADesktop.exe",
+        "Link2EA.exe",
+        "bf1.exe",
+        "bfv.exe",
+        "BF2042.exe",
+        "bf6.exe",
+        "bflabs.exe",
+        "crashmsg.exe",
+        "r5apex_dx12.exe",
+        "ApexLauncher.exe",
+        "start_protected_game.exe",
+        "EasyAntiCheat_EOS_Setup.exe"
+      ]
+    }
+  ]
+}

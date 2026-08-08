@@ -1,0 +1,25 @@
+payload:
+- +.goog
+- +.google
+- +.google.com
+- +.ggpht.com
+- +.gstatic.com
+- +.googleapis.com
+- +.googleapps.com
+- +.googleusercontent.com
+- +.gvt1.com
+- +.gvt2.com
+- +.googleflights.net
+- +.googletraveladservices.com
+- +.recaptcha.net
+- ohttp-relay-safebrowsing-chrome.google.fastly-edge.com
+- +.gstatic.cn
+- +.gstatic-cn.com
+- +.googleapis.cn
+- +.googleapis-cn.com
+- +.googleapps-cn.com
+- +.gvt1-cn.com
+- +.gvt2-cn.com
+- +.googleflights-cn.net
+- +.googletraveladservices-cn.com
+- +.recaptcha-cn.net

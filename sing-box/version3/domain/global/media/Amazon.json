@@ -1,0 +1,32 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain": [
+        "d1v5ir2lpwr8os.cloudfront.net",
+        "d22qjgkvxw22r6.cloudfront.net",
+        "d25xi40x97liuc.cloudfront.net",
+        "d27xxe7juh1us6.cloudfront.net",
+        "dmqdd6hw24ucf.cloudfront.net"
+      ]
+    },
+    {
+      "domain_suffix": [
+        "pv-cdn.net",
+        "aiv-cdn.net",
+        "primevideo.com",
+        "aiv-delivery.net",
+        "amazonvideo.com",
+        "video.a2z.com",
+        "atv-ext.amazon.com",
+        "atv-ps.amazon.com",
+        "atv-ext-eu.amazon.com",
+        "atv-ext-fe.amazon.com",
+        "atv-ps-eu.amazon.com",
+        "atv-ps-fe.amazon.com",
+        "atv-ps-eu.amazon.co.uk",
+        "atv-ps-fe.amazon.co.jp"
+      ]
+    }
+  ]
+}

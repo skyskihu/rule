@@ -1,0 +1,18 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "126.com",
+        "126.net",
+        "127.net",
+        "163.com",
+        "netease.com",
+        "lofter.com",
+        "youdao.com",
+        "163yun.com",
+        "ydstatic.com"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "version": 4,
+  "rules": [
+    {
+      "domain_suffix": [
+        "abchina.com",
+        "ecitic.com",
+        "ecitic.net",
+        "citicbank.com",
+        "ccb.com",
+        "cebbank.com",
+        "cmbimg.com",
+        "mbcloud.com",
+        "cmbchina.com",
+        "pingan.com"
+      ]
+    }
+  ]
+}

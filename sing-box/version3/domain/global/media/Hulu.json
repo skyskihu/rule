@@ -1,0 +1,25 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain": [
+        "cws-hulu.conviva.com",
+        "hulu.map.fastly.net",
+        "hulu.com.c.footprint.net",
+        "cs428.wpc.edgecastcdn.net"
+      ]
+    },
+    {
+      "domain_suffix": [
+        "hulu.com",
+        "huluad.com",
+        "huluim.com",
+        "huluqa.com",
+        "hulumail.com",
+        "hulustream.com",
+        "hulu.hb.omtrdc.net",
+        "hulu.sc.omtrdc.net"
+      ]
+    }
+  ]
+}
